@@ -1,0 +1,52 @@
+.header {
+  color: #3d4246;
+  font-size: 2.2em;
+  font-weight: normal;
+}
+.list-group-item {
+  font-size: larger;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.github-link {
+  color: #333;
+  margin-left: 10px;
+}
+.github-link:hover {
+  color: #4078c0;
+}
+.list-group-item {
+  font-size: x-large;
+}
+ol li {
+  font-size: large;
+}
+h5 {
+  font-size: larger;
+}
+footer {
+  font-size: large;
+}
+
+@media (max-width: 576px) {
+  .header {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: large;
+  }
+  h5 {
+    font-size: x-large;
+  }
+  ol li {
+    font-size: large;
+  }
+  .list-group-item {
+    font-size: large;
+  }
+}

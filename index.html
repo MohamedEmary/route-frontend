@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Route Front-end Course</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
+  <body>
+    <div class="container d-flex flex-column min-vh-100 justify-content-center">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="header mb-5">
+            Mohamed Emary's Route Notes & Assignments Index
+          </h1>
+          <div class="list-group">
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              data-toggle="modal"
+              data-target="#PDF"
+            >
+              Sessions PDF Notes
+            </button>
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              data-toggle="modal"
+              data-target="#assignmentsModal"
+            >
+              Assignments
+            </button>
+            <!-- Add more folders here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Folder 1 -->
+    <div
+      class="modal fade"
+      id="PDF"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="folder1ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="folder1ModalLabel">PDF Notes:</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li><a href="test/test-slide.html">Session 1</a></li>
+            </ol>
+            <!-- Add more links here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal for Assignments -->
+    <div
+      class="modal fade"
+      id="assignmentsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="assignmentsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="assignmentsModalLabel">Assignments:</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Session</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Live Preview</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Add your assignments links here -->
+                <tr>
+                  <th scope="row">Session 1</th>
+                  <td>
+                    <a href="link-to-assignment-1-code">Code</a>
+                  </td>
+                  <td><a href="link-to-assignment-1-live">Live Preview</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted">Mohamed Emary</span>
+        <a href="https://github.com/MohamedEmary" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+    <script>
+      window.onload = function () {
+        var anchors = document.getElementsByTagName("a");
+        for (var i = 0; i < anchors.length; i++) {
+          anchors[i].setAttribute("target", "_blank");
+          anchors[i].setAttribute("rel", "noopener noreferrer");
+        }
+      };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
