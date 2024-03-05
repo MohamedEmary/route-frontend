@@ -1,6 +1,6 @@
 ---
 title: \begin{title}\centering\vspace*{0cm}\rule{\textwidth}{0.05cm}\linebreak\vspace{0.5cm}{\Huge\bfseries Session 1 \par}\vspace{0.1cm}\hrule\end{title}
-date: \today
+date: March 3, 2024
 ---
 
 # Introduction
