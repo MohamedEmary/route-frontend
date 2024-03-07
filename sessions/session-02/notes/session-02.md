@@ -85,7 +85,7 @@ Example:
 </form>
 ```
 
-To allow any type of images you can use `accept="image/*"`. See this [link](https://www.w3schools.com/tags/att_input_accept.asp) for more information.
+To allow any type of images you can use `accept="image/*"`. See [this link](https://www.w3schools.com/tags/att_input_accept.asp) for more information.
 
 ## Button
 
@@ -95,9 +95,9 @@ The `button` element has a `type` attribute that can be `submit`, `reset`, or `b
 - `reset`: The button resets all the form data to its initial values.
 - `button`: The button does nothing.
 
-## Radio Buttons & Checkboxes
-
 You can also use a regular `input` tag instead of `button` and set the `type` attribute to `submit`, `reset`, or `button`, but it's better to use the `button` tag.
+
+## Radio Buttons & Checkboxes
 
 Another type of input we can use is `radio`. One important thing about `radio` is that all the radio buttons in a group should have the same `name` attribute. You should also add `value` attribute to each radio button.
 
@@ -147,7 +147,7 @@ The same applies for checkboxes except that you can select multiple checkboxes a
 
 ## Textarea
 
-The `textarea` tag is used to create a multi-line text input. The `rows` and `cols` attributes are used to specify the size of the textarea but the user can still resize it using the mouse.
+The `textarea` tag is used to create a multi-line text input. The `rows` and `cols` attributes are used to specify the size of the textarea but the user can still resize it using the mouse by dragging the bottom right corner of the textarea.
 
 Example:
 
@@ -163,7 +163,9 @@ Example:
 
 The `select` tag is used to create a drop-down list and the `option` tag is used to define the options in the list. If you don't give a `value` attribute to the `option` tag, the value will be the text inside the `option` tag.
 
-You can also group the options using the `optgroup` tag, and you can only choose what is available in the list (you can't enter a value that is not in the list).
+You can also group the options using the `optgroup` tag.
+
+When using `select` with `option` you can only choose what is available in the list (you can't enter a value that is not in the list).
 
 Example:
 
@@ -231,8 +233,74 @@ Table: hidden, disabled, readonly attributes
 | `disabled` | Disables the input field and doesn't send the data to the server.                               |
 | `readonly` | Prevents the user from changing the value of the input field, and sends the data to the server. |
 
-## Extra Information
+# Extra Information
 
-To check wheather a tag or attribute you are using is supported by the browser you can use the [caniuse](https://caniuse.com/) website.
+To check wheather a tag or attribute you are using is supported by the browser you can use the [Can I Use](https://caniuse.com/) website.
 
 To check your HTML code markup you can use [W3C Markup Validation Service](https://validator.w3.org/).
+
+\pagebreak
+
+# Summary
+
+## Tags
+
+| Tag        | Description                                             |
+| :------------- | :--------------------------------------------------------------------- |
+| `form`     | Creates an HTML form for user input.                    |
+| `input`    | Defines an input field where the user can enter data.   |
+| `label`    | Defines a label for an `input` element.                 |
+| `button`   | Defines a clickable button.                             |
+| `textarea` | Defines a multi-line text input area.                   |
+| `select`   | Defines a drop-down list.                               |
+| `option`   | Defines an option in a drop-down list or a datalist.    |
+| `datalist` | Defines a list of options for an `input` element.       |
+| `optgroup` | Defines a group of related options in a drop-down list. |
+| `fieldset` | Groups related elements in a form.                      |
+| `legend`   | Defines a caption for a `fieldset` element.             |
+
+## Attributes
+
+| Attribute     | Description                                                                     |
+| :------------ | :------------------------------------------------------------------------------ |
+| `name`        | Specifies the name of an `input` element that is sent to the server.            |
+| `type`        | Specifies the type of an `input` element.                                       |
+| `value`       | Specifies a pre-defined value of an `input` element.                            |
+| `placeholder` | Specifies a short hint that describes the expected value of an `input` element. |
+| `for`         | Specifies which `input` element a label is bound to.                            |
+| `id`          | Specifies a unique id for an `input` element.                                   |
+| `list`        | Refers to a `datalist` element that contains some options.                      |
+| `multiple`    | Specifies that a user can enter more than one value in an `input` element.      |
+| `accept`      | Specifies the types of files that the server accepts.                           |
+| `rows`        | Specifies the visible number of lines in a `textarea` element.                  |
+| `cols`        | Specifies the visible width of a `textarea` element.                            |
+| `minlength`   | Specifies the minimum number of characters allowed in an `input` element.       |
+| `maxlength`   | Specifies the maximum number of characters allowed in an `input` element.       |
+| `min`         | Specifies the minimum value allowed in an `input` element.                      |
+| `max`         | Specifies the maximum value allowed in an `input` element.                      |
+| `selected`    | Specifies that an option should be pre-selected when the page loads.            |
+| `required`    | Specifies that an input field must be filled out before submitting the form.    |
+| `readonly`    | Specifies that an input field is read-only.                                     |
+| `hidden`      | Specifies that an input field is hidden from the user.                          |
+| `disabled`    | Specifies that an input field is disabled so the user can't use it.             |
+
+## Input Types
+
+| Type       | Description                                   |
+| :------------- | :--------------------------------------------------------------------- |
+| `text`     | Used to create plain text input fields.       |
+| `password` | Used to create password input fields.         |
+| `email`    | Used to create email input fields.            |
+| `number`   | Used to create numeric input fields.          |
+| `date`     | Used to create date input fields.             |
+| `color`    | Used to create color input fields.            |
+| `url`      | Used to create URL (links) input fields.      |
+| `tel`      | Used to create telephone number input fields. |
+| `search`   | Used to create search input fields.           |
+| `file`     | Used to create file upload input fields.      |
+| `radio`    | Used to create radio buttons.                 |
+| `checkbox` | Used to create checkboxes.                    |
+| `submit`   | Used to create form submit buttons.           |
+| `reset`    | Used to create form data reset buttons.       |
+| `button`   | Used to create buttons that do nothing.       |
+| `range`    | Used to create a range of numeric values.     |
