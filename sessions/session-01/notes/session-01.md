@@ -134,3 +134,52 @@ You can make the table take the full width of the page using the `width` attribu
 You can make a cell span multiple columns using the `colspan` attribute, and you can make a cell span multiple rows using the `rowspan` attribute.
 
 To give the table a background color, you can use the `style` attribute and set the `background-color` property. You can also set the `color` property to change the text color.
+
+\pagebreak
+
+# Summary
+
+- **HTML** defines the structure of your website.
+- **CSS** defines the style of your website.
+- **JavaScript** defines the behavior of your website.
+- **Visual Studio Code** is a text editor developed by Microsoft for Windows, Linux and macOS.
+- **Tim Berners-Lee** invented the World Wide Web in 1989.
+- **SEO** is used to rank your website higher in search engines.
+
+## Tag
+
+| Tag       | Description                                          |
+| :----------- | :------------------------------------------------------------------------------- |
+| `<html>`  | The root element of an HTML page.                    |
+| `<head>`  | Contains metadata about the HTML page.               |
+| `<title>` | Specifies the title of the page.                     |
+| `<body>`  | Contains the visible page content.                   |
+| `<h1>`    | Defines a level 1 heading. We have `<h1>` to `<h6>`. |
+| `<img>`   | Embeds an image into the page.                       |
+| `<a>`     | Creates a hyperlink.                                 |
+| `<ol>`    | Defines an ordered list.                             |
+| `<ul>`    | Defines an unordered list.                           |
+| `<li>`    | Defines a list item.                                 |
+| `<table>` | Defines a table.                                     |
+| `<thead>` | Groups the header content in a table.                |
+| `<tbody>` | Groups the body content in a table.                  |
+| `<tfoot>` | Groups the footer content in a table.                |
+| `<tr>`    | Defines a row in a table.                            |
+| `<th>`    | Defines a header cell in a table.                    |
+| `<td>`    | Defines a cell in a table.                           |
+
+## Attribute
+
+| Attribute | Description                                                                      |
+| :----------- | :------------------------------------------------------------------------------- |
+| `src`     | Specifies the source of an image.                                                |
+| `alt`     | Specifies an alternate text for an image when the image cannot be displayed.     |
+| `href`    | Specifies the URL of the page the link goes to.                                  |
+| `target`  | Specifies where to open the linked document.                                     |
+| `rel`     | Specifies the relationship between the current document and the linked document. |
+| `type`    | Specifies the type of numbering for list items.                                  |
+| `border`  | Specifies the width of the table border.                                         |
+| `width`   | Specifies the width of the table.                                                |
+| `height`  | Specifies the height of the table.                                               |
+| `colspan` | Specifies the number of columns a cell should span.                              |
+| `rowspan` | Specifies the number of rows a cell should span.                                 |
