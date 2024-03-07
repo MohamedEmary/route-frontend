@@ -246,7 +246,7 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 ## Tags
 
 | Tag        | Description                                             |
-| :------------- | :--------------------------------------------------------------------- |
+| :---------------- | :------------------------------------------------------------------------------ |
 | `form`     | Creates an HTML form for user input.                    |
 | `input`    | Defines an input field where the user can enter data.   |
 | `label`    | Defines a label for an `input` element.                 |
@@ -262,7 +262,7 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 ## Attributes
 
 | Attribute     | Description                                                                     |
-| :------------ | :------------------------------------------------------------------------------ |
+| :---------------- | :------------------------------------------------------------------------------ |
 | `name`        | Specifies the name of an `input` element that is sent to the server.            |
 | `type`        | Specifies the type of an `input` element.                                       |
 | `value`       | Specifies a pre-defined value of an `input` element.                            |
@@ -287,7 +287,7 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 ## Input Types
 
 | Type       | Description                                   |
-| :------------- | :--------------------------------------------------------------------- |
+| :---------------- | :------------------------------------------------------------------------------ |
 | `text`     | Used to create plain text input fields.       |
 | `password` | Used to create password input fields.         |
 | `email`    | Used to create email input fields.            |
