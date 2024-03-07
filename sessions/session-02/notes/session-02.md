@@ -9,7 +9,7 @@ HTML forms are used to collect user input. To make a form in HTML you need to us
 
 Form can contain input elements like text fields and labels for these fields.
 
-example:
+Example:
 
 ```{.html .numberLines}
 <form action="/action_page.php">
@@ -21,11 +21,11 @@ example:
 </form>
 ```
 
-## Type Attribute
-
 As you see in the example the value in `for` in the `label` element should be exactly the same as the value in `id` of the `input` field.
 
 Each input field should hava a `name` attribute to be able to be sent to the server.
+
+## Type Attribute
 
 Sometimes you want the user to enter a password, an email, a phone number, a date, a color, a number, etc. HTML5 has a lot of new input types for these cases. Just use the `type` attribute to specify the type of input.
 
