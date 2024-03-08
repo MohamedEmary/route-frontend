@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <form style="background-color: red" action="#">
+      <fieldset style="padding: 20px">
+        <legend style="background-color: blue">Personal Data</legend>
+        <fieldset style="background-color: gold">
+          <legend
+            style="background-color: blue; height: 70px; line-height: 70px"
+          >
+            Your Name
+          </legend>
+          <table>
+            <tbody>
+              <tr>
+                <th style="text-align: start">
+                  <label for="fname">First Name</label>
+                </th>
+                <td>:</td>
+                <td>
+                  <input
+                    id="fname"
+                    name="fname"
+                    type="text"
+                    placeholder="Ex: Ahmed"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th style="text-align: start">
+                  <label for="mname">Second Name</label>
+                </th>
+                <td>:</td>
+                <td>
+                  <input
+                    id="mname"
+                    name="mname"
+                    type="text"
+                    placeholder="Ex: Emary"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+
+        <br /><br /><br />
+
+        <table>
+          <tbody>
+            <tr>
+              <th style="text-align: start">
+                <label for="phone">Your Phone</label>
+              </th>
+              <td>:</td>
+              <td>
+                <input type="tel" name="phone" id="phone" />
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: start">
+                <label for="email">Email</label>
+              </th>
+              <td>:</td>
+              <td>
+                <input type="email" name="email" id="email" />
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: start">
+                <label for="pass">Password</label>
+              </th>
+              <td>:</td>
+              <td>
+                <input type="password" name="pass" id="pass" />
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: start">
+                <label for="repass">Re-Password</label>
+              </th>
+              <td>:</td>
+              <td>
+                <input type="password" name="repass" id="repass" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br /><br /><br />
+
+        <input type="radio" value="male" name="gender" id="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" value="female" name="gender" id="female" />
+        <label for="female">Female</label><br />
+
+        <br />
+
+        <input type="checkbox" value="student" name="status" id="student" />
+        <label for="student">Student</label><br />
+        <input type="checkbox" value="grad" name="status" id="grad" />
+        <label for="grad">Graduated</label><br />
+
+        <br /><br />
+
+        <select name="select" id="select">
+          <optgroup label="Group 1">
+            <option value="option1.1">Option 1.1</option>
+            <option value="option1.2">Option 1.2</option>
+          </optgroup>
+          <optgroup label="Group 2">
+            <option value="option2.1">Option 2.1</option>
+            <option value="option2.2">Option 2.2</option>
+          </optgroup>
+          <optgroup label="Group 3" disabled>
+            <option value="option3.1">Option 3.1</option>
+            <option value="option3.2">Option 3.2</option>
+          </optgroup>
+        </select>
+
+        <br />
+
+        <input
+          type="image"
+          src="img/submit-btn.png"
+          alt="Submit"
+          width="99"
+          height="30"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>
