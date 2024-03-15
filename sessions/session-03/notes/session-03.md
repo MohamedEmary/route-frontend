@@ -214,7 +214,11 @@ If you want your styling to be dynamic and responsive, you should use a relative
 
 1. **Block-level elements** start on a new line and take up the full width available.
 
+Example block elements are `<div>`, `<h1>` to `<h6>`, `<p>`, `<form>`, `<header>`, `<footer>`, `<section>`, and `<ul>`.
+
 2. **Inline elements** do not start on a new line and only take up as much width as necessary.
+
+Example inline elements are `<a>`, `<span>`, `<img>`, `<label>`, `<input>`, `<strong>`, `<em>`, and `<b>`.
 
 You can change whether an element is block or inline using the `display` property. For example, you can change a `<div>` to an inline element using `display: inline;` or an `<a>` tag to a block element using `display: block;`.
 
@@ -222,16 +226,33 @@ With inline elements `width` and `height` properties have no effect.
 
 3. **Inline-block** elements are similar to inline elements, but they can still have width and height.
 
-**How can `<img>` element be inline and still have width and height?** *(review this part)*
+## Replaced Elements
 
-This is because the `<img>` element is **replaced inline element**. A replaced element is one whose appearance and dimensions are defined by an external resource. In this case, the external resource is the image file itself.
+**How can `<img>` element be inline and still have width and height?**
 
-You can set the width and height of an `<img>` element using the width and height attributes in the HTML, or you can use CSS. Here's an example:
+This is because the `<img>` element is **replaced inline element**.
+<!-- A replaced element is one whose appearance and dimensions are defined by an external resource. In this case, the external resource is the image file itself. -->
+
+Replaced elements can be given explicit width and height values using the `width` and `height` properties. This allows you to control the size of the element, regardless of its content.
+
+A replaced element in HTML is an element that is replaced with another element, such as an image, a video, or an     audio file. Replaced elements are not rendered in the same way as other HTML elements, and they do not have the same properties or behaviors. Replaced elements are used to embed content that cannot be created with HTML.
+
+The most common replaced elements are:
+
+- `<img>` : Inserts an image into the document.
+- `<video>` : Inserts a video into the document.
+- `<audio>` : Inserts an audio file into the document.
+- `<iframe>` : Inserts a frame into the document.
+- `<input>` : Inserts an input field into the document.
+
+You can set the width and height of an `<img>` element using the `width` and `height` attributes in the HTML, or you can use CSS. Here's an example:
 
 ```{.html .numberLines}
 <img src="image.jpg" alt="An image" style="width: 200px; height: 200px;">
 ```
 
-In this example, the image will be displayed as a 200px by 200px square, regardless of the actual dimensions of image.jpg.
+In this example, the image will be displayed as a `200px` by `200px` square, regardless of the actual dimensions of image.jpg.
 
-## ADD SUMMARY THE LAST PART OF THE SESSION
+\pagebreak
+
+# Summary
