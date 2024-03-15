@@ -5,11 +5,9 @@ date: March 10, 2024
 
 # Review & Questions
 
-In the first part of the session, eng. Shimaa reviewed the previous sessions and asked some questions to the students to make sure that they understand the previous sessions.
+In the first part of the session, eng. Shimaa reviewed the previous sessions and asked us some questions to make sure we understand the previous sessions well.
 
 # CSS
-
-<!-- ## What is CSS? -->
 
 CSS stands for *Cascading Style Sheets*. It is a style language used for describing the look and formatting of a document written in HTML.
 
@@ -151,7 +149,7 @@ Classes are also used to reduce code repetition so if you want to apply the same
 
 To select an HTML element, you can also use the id of that element, and to use the id in the CSS file you should use a hash `#` before the id name for example if you have an id called `intro` you should use `#intro` in the CSS file.
 
-The difference between the class and the id is that the class can be used for multiple elements but the id should be **unique** in the HTML document.
+The difference between the class and the id is that the class can be used for multiple elements but the **id should be unique** in the HTML document.
 
 ### Grouping
 
@@ -180,7 +178,7 @@ CSS:
 
 You can use the space to select an element only if it is inside another element. For example if you want to apply a style to the paragraph only if it is inside a `div` with a class `intro` you can use `.intro p` in the CSS file.
 
-**What if you want to apply a style to an element with a specific class only? Or to an element with multiple classes?**
+**What if you want to apply a style to an element with a specific class only? Or apply the style to an element with multiple classes?**
 
 To apply a style to a paragraph only if it has a class `intro` you can use `p.intro`, and to apply a style to an element only if it has both the classes `intro` and `center` you can use `.intro.center` without a space between the classes names.
 
@@ -202,7 +200,9 @@ The following list of selector types is by increasing specificity:
 <!-- 5. Pseudo-classes -->
 <!-- 7. Inline style -->
 
-The rules above also applies when combining multiple selectors in the same rule, for example if you have a rule with a tag and a class, the class will be more specific than the class only.
+The rules above also applies when combining multiple selectors in the same rule, for example if you have a rule with a tag and a class, it will be more specific than a rule with a class only.
+
+For a more detailed explanation on how to calculate specificity, you can check [the following link](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
 
 ## Some Styling Properties
 
@@ -210,13 +210,17 @@ The default value for `height` is `auto` and for `width` is `100%`.
 
 If you want your styling to be dynamic and responsive, you should use a relative unit like `%`, for example `width: 100%` will make the width of the element 100% of the width of its parent element.
 
-### Block & Inline Elements
+## Block & Inline Elements
 
-1. **Block-level elements** start on a new line and take up the full width available.
+### Block-level elements
+
+Start on a new line and take up the full width available
 
 Example block elements are `<div>`, `<h1>` to `<h6>`, `<p>`, `<form>`, `<header>`, `<footer>`, `<section>`, and `<ul>`.
 
-2. **Inline elements** do not start on a new line and only take up as much width as necessary.
+### Inline elements
+
+Do not start on a new line and only take up as much width as necessary
 
 Example inline elements are `<a>`, `<span>`, `<img>`, `<label>`, `<input>`, `<strong>`, `<em>`, and `<b>`.
 
@@ -224,7 +228,9 @@ You can change whether an element is block or inline using the `display` propert
 
 With inline elements `width` and `height` properties have no effect.
 
-3. **Inline-block** elements are similar to inline elements, but they can still have width and height.
+### Inline-block
+
+Elements are similar to inline elements, but they can still have width and height
 
 ## Replaced Elements
 
@@ -251,8 +257,28 @@ You can set the width and height of an `<img>` element using the `width` and `he
 <img src="image.jpg" alt="An image" style="width: 200px; height: 200px;">
 ```
 
-In this example, the image will be displayed as a `200px` by `200px` square, regardless of the actual dimensions of image.jpg.
+In this example, the image will be displayed as a `200px` by `200px` square, regardless of the actual dimensions of `image.jpg`.
 
 \pagebreak
 
 # Summary
+
+CSS (Cascading Style Sheets), a style language used for describing the look and formatting of HTML documents.
+
+Key points discussed in this session:
+
+1. **CSS Rule Structure**: A CSS rule consists of a selector and a declaration block. The declaration block contains properties and their values.
+
+2. **CSS Placement**: CSS can be placed inline, internally within the HTML document, or externally in a separate file.
+
+3. **Separation of CSS from HTML**: This is recommended for maintainability, reusability, and performance.
+
+4. **CSS Selectors**: These are used to select HTML elements to style. They can be based on tag names, class names, or IDs.
+
+5. **Specificity**: This is how browsers decide which CSS property values are the most relevant to an element and will be applied. Specificity increases from universal selectors to type selectors, class selectors, and ID selectors.
+
+6. **Styling Properties**: The document discusses some styling properties like `height` and `width`.
+
+7. **Block & Inline Elements**: Block-level elements start on a new line and take up the full width available, inline elements do not start on a new line and only take up as much width as necessary, and inline-block elements are similar to inline elements, but they can still have width and height.
+
+8. **Replaced Elements**: These are elements whose appearance and dimensions are defined by an external resource, such as an image, video, or audio file.
