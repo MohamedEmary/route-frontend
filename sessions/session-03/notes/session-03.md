@@ -9,7 +9,7 @@ In the first part of the session, eng. Shimaa reviewed the previous sessions and
 
 # CSS
 
-CSS stands for *Cascading Style Sheets*. It is a style language used for describing the look and formatting of a document written in HTML.
+CSS stands for *Cascading Style Sheets*. It is a style language used for describing the look and formatting of a document written in HTML. The first version of CSS was introduced in 1996.
 
 ## General look of a CSS *Rule*
 
@@ -151,6 +151,8 @@ To select an HTML element, you can also use the id of that element, and to use t
 
 The difference between the class and the id is that the class can be used for multiple elements but the **id should be unique** in the HTML document.
 
+Since ID should be unique, you shouldn't use the same id more than once in the same HTML document.
+
 ### Grouping
 
 You can group multiple elements to apply the same style to them using a `div` element.
@@ -263,7 +265,7 @@ In this example, the image will be displayed as a `200px` by `200px` square, reg
 
 # Summary
 
-CSS (Cascading Style Sheets), a style language used for describing the look and formatting of HTML documents.
+CSS (Cascading Style Sheets), a style language used for describing the look and formatting of HTML documents. The first version was introduced in 1996.
 
 Key points discussed in this session:
 
