@@ -148,6 +148,8 @@ To give the table a background color, you can use the `style` attribute and set 
 
 ## Tag
 
+Table: Tags Summary
+
 | Tag       | Description                                          |
 | :----------- | :------------------------------------------------------------------------------- |
 | `<html>`  | The root element of an HTML page.                    |
@@ -169,6 +171,8 @@ To give the table a background color, you can use the `style` attribute and set 
 | `<td>`    | Defines a cell in a table.                           |
 
 ## Attribute
+
+Table: Attributes Summary
 
 | Attribute | Description                                                                      |
 | :----------- | :------------------------------------------------------------------------------- |

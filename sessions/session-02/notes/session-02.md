@@ -245,6 +245,8 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 
 ## Tags
 
+Table: Tags Summary
+
 | Tag        | Description                                             |
 | :---------------- | :------------------------------------------------------------------------------ |
 | `form`     | Creates an HTML form for user input.                    |
@@ -260,6 +262,8 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 | `legend`   | Defines a caption for a `fieldset` element.             |
 
 ## Attributes
+
+Table: Attributes Summary
 
 | Attribute     | Description                                                                     |
 | :---------------- | :------------------------------------------------------------------------------ |
@@ -285,6 +289,8 @@ To check your HTML code markup you can use [W3C Markup Validation Service](https
 | `disabled`    | Specifies that an input field is disabled so the user can't use it.             |
 
 ## Input Types
+
+Table: Input Types Summary
 
 | Type       | Description                                   |
 | :---------------- | :------------------------------------------------------------------------------ |
