@@ -86,7 +86,7 @@ To center items inside a div use `text-align: center;`.
 <!-- اراجع الجزء بتاع ال padding في الفيديو -->
 <!-- (CSS Reset and CSS Normalization) -->
 
-The HTML page `body` has a default `margin` of `8px`.
+The HTML page `body` has a default `margin` of `8px`, but it can vary between browsers.
 
 ### Margin Collapse
 
@@ -191,7 +191,7 @@ Both `contain` and `cover` will preserve the image original aspect ratio, howeve
 
 ---
 
-To give an image 100% of the height of the screen you can use `background-size: 100vh;`  
+<!-- To give an image 100% of the height of the screen you can use `background-size: 100% 100vh;`   -->
 
 `vh` means viewport height, and `vw` means viewport width. These units are used to make the element take a percentage of the visible area of the screen. Each 1vw or 1vh is equal to 1/100 of the viewport width or height.
 
@@ -214,3 +214,80 @@ margin collapse في السريع
 -->
 
 <!-- iframe video  -->
+
+\pagebreak
+
+# Summary
+
+**Float & Clear**
+
+- `float` is used to position an element along the left or right side of its container.
+- `clear` is used to specify on which sides of an element no elements are allowed to float.
+
+**Margin & Padding**
+
+- `margin` is the space outside the border of an element
+- `padding` is the space inside the border of an element.
+- `margin: auto;` can be used to center an element horizontally.
+
+**Margin Collapse**
+
+Margin collapse happens when the top and bottom margins of blocks are combined into a single margin.
+
+**Dealing with Fonts in CSS**
+
+Some important font properties in CSS include:
+
+- `font-size`
+- `font-weight`
+- `color`
+- `font-style`
+- `font-family`
+
+**How to embed a font from Google Fonts?**
+
+- Go to google fonts and choose the font you want.
+- Click on the + icon to add the font to the selection.
+- Click on the embed tab and copy the link tag and paste it in the head of your html file.
+- Copy the font-family and paste it in the css file.
+
+**Background**
+
+- `background-color` is used to set the background color of an element.
+
+- `background-image` is used to set the background image of an element, and it has some important properties like:
+  - `background-repeat`
+  - `background-position`
+  - `background-size`
+  - `background-attachment`.
+
+<!-- `background-repeat` can be:
+
+- `no-repeat`
+- `repeat-x`
+- `repeat-y`
+- `repeat`
+- `space`
+
+`background-position` can be:
+
+- `top`
+- `bottom`
+- `left`
+- `right`
+- `center`
+- x and y coordinates
+
+`background-size` can be:
+
+- pixels
+- percentage
+- `cover`
+- `contain`
+
+`background-attachment` can be:
+
+- `scroll`
+- `fixed` -->
+
+`vh` means viewport height, and `vw` means viewport width.
