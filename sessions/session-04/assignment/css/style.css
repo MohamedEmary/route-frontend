@@ -3,6 +3,20 @@
   padding: 0px;
 }
 
+p,
+button {
+  font-family: "Alegreya Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+  font-family: "Alegreya";
+}
+
 .navbar a {
   text-decoration: none;
   color: gray;
@@ -54,4 +68,74 @@
 .navbar img,
 .navbar ul {
   vertical-align: middle;
+}
+
+/* =========== Welcome Section =========== */
+
+.welcome {
+  height: 100vh;
+  vertical-align: middle;
+  overflow: auto;
+  color: white;
+  background: url(../images/drew-coffman-1872.jpg);
+  background-size: cover;
+}
+
+.welcome .inner-container {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.welcome p {
+  line-height: 40px;
+  margin: auto;
+  font-size: 22px;
+  padding: 15px 0px;
+  max-width: 650px;
+}
+
+.welcome h1 {
+  font-weight: normal;
+  font-size: 76px;
+}
+
+.contact-us,
+.learn-more {
+  font-family: "Alegreya Sans";
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: center;
+  margin-top: 20px;
+  border: 0px;
+  width: 120px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 5px;
+}
+
+.learn-more {
+  background-color: #947f5e;
+}
+
+.contact-us {
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.scroll-btn {
+  display: block;
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  margin: auto;
+  margin-top: 50px;
+  width: 25px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 20px;
+  background-color: transparent;
 }
