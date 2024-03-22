@@ -1,3 +1,5 @@
+/* =========== Whole Page Styling =========== */
+
 * {
   margin: 0px;
   padding: 0px;
@@ -17,14 +19,16 @@ li {
   font-family: "Alegreya";
 }
 
-.navbar a {
-  text-decoration: none;
-  color: gray;
-}
-
 .inner-container {
   width: 80%;
   margin: auto;
+}
+
+/* =========== Navbar Section =========== */
+
+.navbar a {
+  text-decoration: none;
+  color: gray;
 }
 
 .navbar {
