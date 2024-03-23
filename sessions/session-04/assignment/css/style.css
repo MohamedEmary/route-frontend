@@ -144,32 +144,37 @@ li {
   background-color: transparent;
 }
 
-/* =========== About Us Section =========== */
+/* =========== About Us & Location Sections =========== */
 
-.about-us {
+.about-us,
+.location {
   height: 700px;
   color: rgb(104, 104, 104);
 }
 
-.about-us .right {
+.about-us .right,
+.location .left {
   width: 45%;
   margin-top: 120px;
 }
 
-.about-us h3 {
+.about-us h3,
+.location h3 {
   color: black;
   font-weight: normal;
   font-size: 35px;
   margin-bottom: 25px;
 }
 
-.about-us p {
+.about-us p,
+.location p {
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 25px;
 }
 
-.about-us div > img {
+.about-us div > img,
+.location div > img {
   width: 650px;
   padding: 45px;
 }
@@ -184,4 +189,16 @@ li {
   border: 1px solid rgba(0, 0, 0, 0.305);
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.location {
+  background-color: rgb(248, 248, 248);
+}
+
+.location .left {
+  padding: 45px;
+}
+
+.location .inner-container {
+  padding-top: 60px;
 }
