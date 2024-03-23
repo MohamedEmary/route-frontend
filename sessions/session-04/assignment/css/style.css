@@ -243,6 +243,7 @@ li {
   max-width: 500px;
 }
 
-.card img {
+.card img,
+.products p {
   width: 90%;
 }
