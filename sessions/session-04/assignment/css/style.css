@@ -21,6 +21,10 @@ h5 {
   font-weight: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 .inner-container {
   width: 80%;
   margin: auto;
@@ -29,7 +33,6 @@ h5 {
 /* =========== Navbar Section =========== */
 
 .navbar a {
-  text-decoration: none;
   color: gray;
 }
 
@@ -344,6 +347,10 @@ iframe {
   vertical-align: middle;
 }
 
+.details .contact a {
+  color: rgb(134, 134, 134);
+}
+
 .details ul {
   list-style: none;
 }
@@ -360,4 +367,30 @@ iframe {
 
 .details .background-image {
   background: url("../images/contact-details-map.png") no-repeat center;
+}
+
+/* =========== Footer Section =========== */
+
+.footer {
+  color: rgb(134, 134, 134);
+  height: 300px;
+  background-color: rgb(53, 51, 48);
+  padding-top: 65px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 22px;
+  margin: 20px;
+}
+
+.footer .logo {
+  width: 370px;
+}
+
+.footer .icon {
+  background-color: rgb(72, 69, 64);
+  border-radius: 50%;
+  width: 60px;
+  margin: 5px;
 }
