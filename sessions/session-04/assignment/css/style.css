@@ -6,7 +6,9 @@
 }
 
 p,
-button {
+button,
+li,
+td {
   font-family: "Alegreya Sans";
 }
 
@@ -14,8 +16,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-li {
+h5 {
   font-family: "Alegreya";
 }
 
@@ -148,20 +149,24 @@ li {
 
 .about-us,
 .products,
-.location {
+.location,
+.contact-info {
   height: 700px;
   color: rgb(104, 104, 104);
 }
 
 .about-us .right,
-.location .left {
+.location .left,
+.contact-info .right,
+.contact-info .left {
   width: 45%;
   margin-top: 120px;
 }
 
 .about-us h3,
 .location h3,
-.products h3 {
+.products h3,
+.contact-info h3 {
   color: black;
   font-weight: normal;
   font-size: 35px;
@@ -169,7 +174,8 @@ li {
 }
 
 .about-us p,
-.location p {
+.location p,
+.contact-info p {
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 25px;
@@ -193,7 +199,8 @@ li {
   margin-right: 10px;
 }
 
-.location {
+.location,
+.contact-info {
   background-color: rgb(248, 248, 248);
 }
 
@@ -246,4 +253,63 @@ li {
 .card img,
 .products p {
   width: 90%;
+}
+
+/* =========== Contact Info Sections =========== */
+
+.contact-info li a {
+  font-size: 21px;
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+
+.contact-info li {
+  list-style-type: none;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+.contact-info li img {
+  vertical-align: middle;
+  width: 50px;
+  background-color: #947f5e;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-info .left {
+  margin-left: 40px;
+}
+
+.contact-info .left,
+.contact-info .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-info iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contact-info .right,
+iframe {
+  position: relative;
+}
+
+.overlay,
+.overlay img {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlay {
+  width: 100%;
+}
+
+.overlay img {
+  background-color: transparent;
+  margin-left: 70px;
 }
