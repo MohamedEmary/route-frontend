@@ -18,6 +18,7 @@ h3,
 h4,
 h5 {
   font-family: "Alegreya";
+  font-weight: normal;
 }
 
 .inner-container {
@@ -82,8 +83,8 @@ h5 {
   vertical-align: middle;
   overflow: auto;
   color: white;
-  background: url(../images/drew-coffman-1872.jpg);
-  background-size: cover;
+  background: url(../images/drew-coffman-1872.jpg) no-repeat fixed;
+  /* background-size: cover; */
 }
 
 .welcome .inner-container {
@@ -100,7 +101,6 @@ h5 {
 }
 
 .welcome h1 {
-  font-weight: normal;
   font-size: 76px;
 }
 
@@ -168,7 +168,6 @@ h5 {
 .products h3,
 .contact-info h3 {
   color: black;
-  font-weight: normal;
   font-size: 35px;
   margin-bottom: 25px;
 }
@@ -212,7 +211,7 @@ h5 {
   padding-top: 60px;
 }
 
-/* =========== Products Sections =========== */
+/* =========== Products Section =========== */
 
 .products {
   text-align: center;
@@ -221,7 +220,6 @@ h5 {
 .products h4 {
   font-size: 23px;
   color: black;
-  font-weight: normal;
   margin-top: 15px;
 }
 
@@ -255,7 +253,7 @@ h5 {
   width: 90%;
 }
 
-/* =========== Contact Info Sections =========== */
+/* =========== Contact Info Section =========== */
 
 .contact-info li a {
   font-size: 21px;
@@ -312,4 +310,54 @@ iframe {
 .overlay img {
   background-color: transparent;
   margin-left: 70px;
+}
+
+/* =========== Details Section =========== */
+.details {
+  background-color: rgb(64, 61, 56);
+  height: 400px;
+  font-size: 22px;
+}
+
+.details .inner-container {
+  padding-top: 75px;
+}
+
+.details .detail-about-us,
+.details .special,
+.details .open-hours,
+.details .contact {
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0px 20px;
+  width: 22%;
+  color: rgb(134, 134, 134);
+}
+
+.details .contact img {
+  width: 40px;
+}
+
+.details .contact img,
+.details .contact p {
+  display: inline;
+  vertical-align: middle;
+}
+
+.details ul {
+  list-style: none;
+}
+
+.details li {
+  margin: 10px 0px;
+}
+
+.details h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.details .background-image {
+  background: url("../images/contact-details-map.png") no-repeat center;
 }
