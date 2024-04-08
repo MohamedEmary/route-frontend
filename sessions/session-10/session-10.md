@@ -295,6 +295,14 @@ They are important for SEO and accessibility, so we have to make sure that they 
 
 Font Awesome is a library of vector graphics icons that we can use in our website.
 
+It allows you to use icons like these:
+
+\begin{center}
+
+\faFacebook\ \faApple\ \faAmazon\ \faAndroid\ \faWindows\ \faLinux\ \faGoogle\ \faTwitter\ \faInstagram\ \faLinkedin\ \faGithub\ \faGitlab\ \faBitbucket\ \faStackOverflow\ \faYoutube\ \faReddit\ \faSlack\ \faWhatsapp\ \faSkype\ \faPinterest\ \faTumblr\ \faSpotify\ \faMap\ \faMapMarker\ \faPhone\ \faPhoto\ \faSave\
+
+\end{center}
+
 Vector graphics are images that can be scaled to any size without losing quality. They are also smaller in size than raster images.
 
 To use font awesome we can use any of the following two methods:
