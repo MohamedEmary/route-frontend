@@ -171,9 +171,9 @@ When using `position: fixed` the original place of the element will not be reser
 
 When using `position: sticky` the original place of the element will be reserved until it reaches a specified threshold, at which point it is positioned relative to the viewport.
 
-<!-- When using `position: fixed;` the element will be positioned relative to the viewport.
+When using `position: fixed;` the element will be positioned relative to the viewport.
 
-When using `position: sticky;` the element will be positioned relative to its normal position until it crosses a specified threshold, at which point it is positioned relative to the viewport.  -->
+When using `position: sticky;` the element will be positioned relative to its normal position until it crosses a specified threshold, at which point it is positioned relative to the viewport. 
 
 <!--
 اراجع علي الجزء ده في الفيديو
