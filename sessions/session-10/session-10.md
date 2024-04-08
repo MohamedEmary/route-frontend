@@ -293,25 +293,26 @@ They are important for SEO and accessibility, so we have to make sure that they 
 
 # Font Awesome Icons
 
+Sometime we need to add icons to our website, icons like phone, map, email, logo, etc. We can use images for that, but images are not scalable and they are larger in size which is not good for the website performance, So to solve this issue we can use an icons library like font awesome.
+
 Font Awesome is a library of vector graphics icons that we can use in our website.
+
+Vector graphics are images that can be scaled to any size without losing quality. They are also smaller in size than raster images so it will not affect the website performance.
 
 It allows you to use icons like these:
 
 \begin{center}
 
-\faFacebook\ \faApple\ \faAmazon\ \faAndroid\ \faWindows\ \faLinux\ \faGoogle\ \faTwitter\ \faInstagram\ \faLinkedin\ \faGithub\ \faGitlab\ \faBitbucket\ \faStackOverflow\ \faYoutube\ \faReddit\ \faSlack\ \faWhatsapp\ \faSkype\ \faPinterest\ \faTumblr\ \faSpotify\ \faMap\ \faMapMarker\ \faPhone\ \faPhoto\ \faSave\
+\faEnvelopeO\ \faInbox\ \faHeart\ \faMap\ \faMapMarker\ \faPhone\ \faPhoto\ \faSave\ \faApple\ \faAmazon\ \faAndroid\ \faWindows\ \faLinux\ \faTwitter\ \faFacebookOfficial\ \faInstagram\ \faGithub\ \faGitlab\ \faStackOverflow\ \faYoutube\ \faReddit\ \faWhatsapp\ \faPinterest\
 
 \end{center}
-
-Vector graphics are images that can be scaled to any size without losing quality. They are also smaller in size than raster images.
 
 To use font awesome we can use any of the following two methods:
 
 **Method 1: Using CDN**
 
-```{.html}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax
-        /libs/font-awesome/6.5.2/css/all.min.css">
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /font-awesome/6.5.2/css/all.min.css">
 ```
 
 **Method 2: Downloading the files**
