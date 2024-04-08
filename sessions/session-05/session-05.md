@@ -61,7 +61,7 @@ So to improve the performance of the website, we can use CSS sprites. CSS sprite
 
 For example, consider the following image, It has 20 icons of different colors, each of 76x76 pixels and the whole image is 384x310 pixels.
 
-![CSS Sprites](image/session-05/css-sprites.png){width=400px}
+![CSS Sprites](image/css-sprites.png){width=400px}
 
 It has a lot of icons. Instead of loading each icon separately, we can combine all the icons in one image and use CSS to display the required icon.
 
@@ -87,19 +87,19 @@ It has a lot of icons. Instead of loading each icon separately, we can combine a
 
 - `border-box` (default) - Starts placing the background **from the border** of the element.
 
-![border-box](image/session-05/border-box.png){height=100px}
+![border-box](image/border-box.png){height=100px}
 
 - `padding-box` - Starts placing the background **from the padding** of the element.
 
-![padding-box](image/session-05/padding-box.png){height=100px}
+![padding-box](image/padding-box.png){height=100px}
 
 - `content-box` - Starts placing the background **from the content** of the element.
 
-![content-box](image/session-05/content-box.png){height=100px}
+![content-box](image/content-box.png){height=100px}
 
 - `text` - Makes the background to be painted within the text, but the text `color` has to be set to `transparent`. ([Not supported in all browsers](https://caniuse.com/?search=background-clip%3Atext))
 
-![text](image/session-05/text.png){height=100px}
+![text](image/text.png){height=100px}
 
 ## Viewport Units
 
