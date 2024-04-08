@@ -311,8 +311,18 @@ To use font awesome we can use any of the following two methods:
 
 **Method 1: Using CDN**
 
+Visit font awesome page on [cdnjs](https://cdnjs.com/libraries/font-awesome) and copy the link of the `all.min.css` file with the version you want of font awesome library.
+
+Then link it to your page as a stylesheet like below:
+
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /font-awesome/6.5.2/css/all.min.css">
+```
+
+This will add **all font awesome icons**, but if you want to add only some icons, for example, brands icons only you can copy its link from cdn too like this:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /font-awesome/6.5.2/css/brands.min.css">
 ```
 
 **Method 2: Downloading the files**

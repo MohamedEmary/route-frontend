@@ -226,8 +226,9 @@ Also, if we still have the parent \texttt{.one} without a \texttt{z-index} value
 
 Coloring System:
 
-- color name
-- hex `#RRGGBB`
+- color name (eg. `red`)
+- Hex `#RRGGBB`
+- Hex with alpha `#RRGGBBAA`
 - `rgb(r, g, b)`
 - `rgba(r, g, b, a)` - a is the opacity
 
