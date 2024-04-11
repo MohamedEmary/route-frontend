@@ -130,14 +130,14 @@ When using `position: relative;` the element will be positioned relative to its 
 
 .relative-two {
     position: relative;
-    top: 20px; 
+    top: 20px;
     bottom: 20px; /* No effect since the page flows from top to bottom */
                   /* Normally no one will use top and bottom together */
 }
 
 .relative-three {
     position: relative;
-    left: 20px; 
+    left: 20px;
     right: 20px;  /* No effect since the page flows from left to right unless you change it */
                   /* Normally no one will also use right and left together */
 }
@@ -157,7 +157,7 @@ When using `position: absolute;` the element will be positioned relative to the 
 .absolute-two {
     position: absolute;
     bottom: 0px;
-    right: 0px; 
+    right: 0px;
 } /* Moves the element to the bottom right of the viewport */
 ```
 
@@ -236,7 +236,7 @@ You can't specify opacity with hex colors.
 
 To hide an element You can use:
 
-- `display: none` -  Item space will be not be reserved
+- `display: none` - Item space will be not be reserved
 - `visibility: hidden` - Item space will be reserved
 - `opacity: 0` - Item space will be reserved
 
@@ -256,3 +256,7 @@ Using absolute position we can make an element expand to the full width and heig
 ```
 
 Mostly we use positioning when we want to make a layered design, or to make an element fixed in a position on the page without being affected by the scrolling and without affecting other elements.
+
+Absolute position can be used to make a layer appear on top of another layer, like for example a "Sale" label on top of a product image.
+
+It's better to use percentage % with `width` and leave `height` as `auto`, you can also use `vh` unit to make the element cover the full height of the viewport.
