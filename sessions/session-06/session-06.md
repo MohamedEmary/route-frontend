@@ -209,7 +209,7 @@ You can also control the overflow for each direction separately using `overflow-
 
 With `overflow` property we can solve some issues we faced before:
 
-The first issue is **Margin Collapse**.
+First: **Margin Collapse**.
 
 \begin{box1}{Overflow \& Margin Collapse}
 
@@ -231,7 +231,7 @@ To solve margin collapse problem:
 
 \end{box1}
 
-The second is float related issues:
+Second: **float related issues**.
 
 \begin{box1}{Overflow \& Float}
 We know from \textbf{Session 4} that float layout has two issues:
@@ -266,6 +266,12 @@ You can also specify the width and height of the IFrame.
 ```
 
 You mostly will find embed option in the share menu of many websites like YouTube and Google Maps.
+
+# Important Exercise
+
+Watch transform exercise videos on google drive.
+
+\pagebreak
 
 # Summary
 
