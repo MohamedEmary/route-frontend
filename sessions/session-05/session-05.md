@@ -117,6 +117,7 @@ A CSS property that allows you to control the position of an element. It can tak
 - `relative` - The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of `top`, `right`, `bottom`, and `left`.
 - `absolute` - The element is removed from the normal flow of the document, and no space is created for the element in the page layout. It is positioned relative to its closest non statically positioned ancestor if any; otherwise, it is placed relative to the initial containing block.
 - `fixed` - The element is removed from the normal flow of the document, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a `transform`, `perspective`, or `filter` property set to something other than `none`, in which case that ancestor behaves as the containing block.
+  - With `fixed` position give the element a `width` of `100%` to make it cover the full width of the viewport.
 - `sticky` - The element is treated as `relative` positioned until it crosses a specified threshold, at which point it is treated as `fixed` positioned.
 
 When using `position: relative;` the element will be positioned relative to its normal position.
@@ -214,7 +215,7 @@ Stacking context is used to determine which elements appear in front of others. 
 
 If we have a collection of sibling elements, each with a `z-index` value, the element with the highest `z-index` value will be displayed above the others. And if one of those elements has a lower `z-index` value than its siblings, it will be displayed below them.
 
-\begin{box7}{Important Note}
+\begin{box3}{Important Note}
 
 If we have 3 siblings \texttt{.one}, \texttt{.two}, and \texttt{.three} which have \texttt{z-index} values of 1, 2, and 3 respectively, and element \texttt{.one} has a child \texttt{.one-child} with \texttt{z-index} value of 999, \texttt{.one-child} will still be displayed below \texttt{.two} and \texttt{.three} because \texttt{.two} and \texttt{.three} have higher \texttt{z-index} values than the parent \texttt{.one}. But if you remove the \texttt{z-index} value from the parent \texttt{.one} and try to give \texttt{.one-child} a \texttt{z-index} value of 999 again, the \texttt{.one-child} will be displayed above \texttt{.two} and \texttt{.three}.
 
@@ -222,7 +223,7 @@ If we have 3 siblings \texttt{.one}, \texttt{.two}, and \texttt{.three} which ha
 
 Also, if we still have the parent \texttt{.one} without a \texttt{z-index} value (the child element here appears above its parent siblings) but we give it an \texttt{opacity} value like 0.5 for example, the \texttt{.one-child} item will return again below \texttt{.two} and \texttt{.three} because the \texttt{opacity} property affects the stacking context.
 
-\end{box7}
+\end{box3}
 
 Coloring System:
 
