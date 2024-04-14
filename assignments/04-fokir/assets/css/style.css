@@ -1,4 +1,4 @@
-/* ====================================General Styling==================================== */
+/* =====================General Styling===================== */
 
 * {
   padding: 0;
@@ -43,7 +43,7 @@ button {
   height: 50px;
 }
 
-/* ====================================Navbar Section==================================== */
+/* =====================Navbar Section===================== */
 
 .navbar {
   /* 
@@ -97,7 +97,7 @@ button {
   margin: 0 15px;
 }
 
-/* ====================================Header Section==================================== */
+/* =====================Header Section===================== */
 
 .header {
   height: 100vh;
@@ -139,7 +139,7 @@ button {
   font-weight: 300;
 }
 
-/* ====================================About Section==================================== */
+/* =====================About Section===================== */
 
 .about .inner {
   width: 70%;
@@ -244,7 +244,7 @@ button {
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* ====================================Services & Stats Sections==================================== */
+/* =====================Services & Stats Sections===================== */
 
 .services,
 .stats {
@@ -297,7 +297,39 @@ button {
   padding: 60px 0px;
 }
 
-/* ====================================Contact Section==================================== */
+/* =====================Portfolio Section===================== */
+
+.portfolio .inner {
+  width: 65%;
+}
+
+.portfolio {
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.portfolio h2 {
+  margin: 20px;
+  font-size: 40px;
+}
+
+.portfolio li {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 20px;
+}
+
+.portfolio li:first-child {
+  color: #ff305b;
+}
+
+.portfolio img {
+  width: 25%;
+  padding: 20px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =====================Contact Section===================== */
 
 .contact {
   text-align: center;
@@ -357,7 +389,7 @@ textarea {
   margin-left: 0;
 }
 
-/* ====================================Footer Section==================================== */
+/* =====================Footer Section===================== */
 
 .footer {
   background-color: #333;
