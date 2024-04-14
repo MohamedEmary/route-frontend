@@ -245,9 +245,10 @@ ul li {
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* ====================================Services Section==================================== */
+/* ====================================Services & Stats Sections==================================== */
 
-.services {
+.services,
+.stats {
   background-color: #f1f1f1;
   text-align: center;
   padding: 100px 0px;
@@ -258,14 +259,16 @@ ul li {
   margin-bottom: 60px;
 }
 
-.services .card {
+.services .card,
+.stats .card {
   box-sizing: border-box;
   padding: 15px;
   float: left;
   width: 25%;
 }
 
-.services i {
+.services i,
+.stats i {
   color: #ff305b;
   font-size: 30px;
 }
@@ -279,4 +282,53 @@ ul li {
 .services .card p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.stats h3 {
+  font-size: 28px;
+  padding: 20px 0px;
+}
+
+.stats h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.stats {
+  padding: 60px 0px;
+}
+
+/* ====================================Footer Section==================================== */
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer p {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #ff305b;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer i {
+  transition-duration: 0.2s;
+  padding: 10px;
+}
+
+.footer i:hover {
+  color: #ff305b;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
