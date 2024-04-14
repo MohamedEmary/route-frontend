@@ -329,6 +329,78 @@ button {
   object-position: center;
 }
 
+/* =====================Feedback Section===================== */
+
+.feedback {
+  padding: 100px 0;
+}
+
+.feedback h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.feedback .inner {
+  width: 45%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.feedback .card {
+  border-radius: 7px;
+  text-align: left;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.feedback .card::before {
+  content: "";
+  border-start-start-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: 190px solid transparent;
+  border-left: 190px solid #ff305b;
+}
+
+.feedback .card > div {
+  display: inline-block;
+}
+
+.feedback .card .left {
+  width: 30%;
+}
+
+.feedback .card .right {
+  width: 65%;
+}
+
+.feedback .right h4 {
+  font-size: 25px;
+}
+.feedback .right a {
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+}
+.feedback .right div {
+  color: gold;
+  margin: 20px 0px;
+}
+
+.feedback .right p,
+.feedback .right a {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.feedback img {
+  position: relative;
+  z-index: 3;
+  padding: 50px;
+  border-radius: 50%;
+}
+
 /* =====================Blog Section===================== */
 
 .blog {
