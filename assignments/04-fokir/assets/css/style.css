@@ -1,0 +1,282 @@
+/* ====================================General Styling==================================== */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: roboto, sans-serif;
+  /* height: 2000px; */
+}
+
+.inner {
+  width: 75%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clr {
+  clear: both;
+}
+
+ul li {
+  display: inline-block;
+}
+
+.fa-solid {
+  display: inline-block;
+}
+
+/* ====================================Navbar Section==================================== */
+
+.navbar {
+  /* 
+  position: fixed;
+  width: 100%;
+  */
+
+  background-color: rgba(0, 0, 0);
+  line-height: 60px;
+}
+
+.navbar .inner {
+  overflow: auto;
+}
+
+.navbar a {
+  vertical-align: baseline;
+  font-size: large;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.navbar a:hover {
+  color: #ff305b;
+}
+
+.navbar .left {
+  float: left;
+  font-weight: 600;
+}
+
+.navbar .left a {
+  font-size: 30px;
+}
+
+/* .navbar ul li {
+  display: inline-block;
+} */
+
+.navbar ul li:first-child a,
+.navbar .left a {
+  color: #ff305b;
+}
+
+.navbar .right {
+  float: right;
+  font-weight: 300;
+}
+
+.navbar .right a {
+  margin: 0 15px;
+}
+
+/* ====================================Header Section==================================== */
+
+.header {
+  height: 100vh;
+  background: url(../img/fokir.jpg) center / cover;
+  color: white;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.header .inner {
+  text-align: center;
+  padding-top: 37vh;
+  position: relative;
+  z-index: 2;
+}
+
+.header h3 {
+  font-weight: normal;
+  font-size: 35px;
+}
+
+.header h1 {
+  font-size: 70px;
+  color: #ff305b;
+}
+
+.header h4 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* ====================================About Section==================================== */
+
+.about .inner {
+  width: 70%;
+}
+
+.about {
+  margin: 80px 0px 0px 0px;
+}
+
+.about .left {
+  border: 10px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+  float: left;
+  width: 30%; /* Adjust this value */
+  height: 450px;
+  margin-bottom: 105px;
+}
+
+.about .left img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 25px;
+  left: 30px;
+  border-radius: 5px;
+}
+
+/* .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 25px;
+  left: 30px;
+  opacity: 1;
+  transform: translateY(100%);
+  transition-duration: 1s;
+}
+
+.overlay i {
+  color: white;
+}
+
+.overlay i:hover {
+  color: #ff305b;
+  transition-duration: 0.3s;
+}
+
+.about .left img:hover .overlay {
+  transform: translateY(0%);
+}*/
+
+.about .left,
+.about .right {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.about .right {
+  float: right;
+  width: 55%;
+}
+
+.about h2 {
+  border-left: 5px solid #ff305b;
+  margin: 20px 0px;
+  font-size: 35px;
+  padding-left: 20px;
+}
+
+.about p {
+  font-size: 20px;
+  padding: 20px 0px;
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px dotted black;
+}
+
+.about button {
+  color: white;
+  background-color: #ff305b;
+  border: 0px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+}
+
+.ul-left {
+  margin-right: 100px;
+}
+
+.ul-left,
+.ul-right {
+  float: left;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.ul-left li,
+.ul-right li {
+  display: block;
+  margin: 10px 0px;
+}
+
+.light-color {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.about a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ====================================Services Section==================================== */
+
+.services {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 100px 0px;
+}
+
+.services h2 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.services .card {
+  box-sizing: border-box;
+  padding: 15px;
+  float: left;
+  width: 25%;
+}
+
+.services i {
+  color: #ff305b;
+  font-size: 30px;
+}
+
+.services .card h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.services .card p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
