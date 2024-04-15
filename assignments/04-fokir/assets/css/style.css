@@ -43,6 +43,32 @@ button {
   height: 50px;
 }
 
+h2 {
+  position: relative;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 25%;
+  height: 1px;
+  background-color: #ff305b;
+}
+
+h2::before {
+  width: 15%;
+  top: 110%;
+  transform: translateY(100%);
+}
+
+h2::after {
+  top: 47px;
+}
+
 /* =====================Navbar Section===================== */
 
 .navbar {
@@ -244,13 +270,18 @@ button {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.about h2::before,
+.about h2::after {
+  width: 0%;
+}
+
 /* =====================Services & Stats Sections===================== */
 
 .services,
 .stats {
   background-color: #f1f1f1;
   text-align: center;
-  padding: 100px 0px;
+  padding: 80px 0px;
 }
 
 .services h2 {
@@ -266,8 +297,22 @@ button {
   width: 25%;
 }
 
+.services .card {
+  transition-duration: 0.3s;
+  padding: 50px 20px;
+}
+
+.services .card:hover {
+  background-color: white;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+.services .card:hover i {
+  font-size: 35px;
+}
+
 .services i,
 .stats i {
+  transition-duration: 0.3s;
   color: #ff305b;
   font-size: 30px;
 }
@@ -275,7 +320,7 @@ button {
 .services .card h3 {
   font-size: 25px;
   font-weight: 500;
-  margin: 20px 0px;
+  margin: 50px 0px 20px 0px;
 }
 
 .services .card p {
@@ -311,6 +356,7 @@ button {
 .portfolio h2 {
   margin: 20px;
   font-size: 40px;
+  position: relative;
 }
 
 .portfolio li {
@@ -324,9 +370,10 @@ button {
 
 .portfolio img {
   width: 25%;
-  padding: 20px;
+  margin: 20px;
   object-fit: contain;
   object-position: center;
+  /* position: relative; */
 }
 
 /* =====================Feedback Section===================== */
@@ -522,6 +569,10 @@ textarea {
 .contact button {
   display: block;
   margin-left: 0;
+}
+
+.contact h2::before {
+  top: 52px;
 }
 
 /* =====================Footer Section===================== */
