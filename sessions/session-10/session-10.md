@@ -315,14 +315,14 @@ Visit font awesome page on [cdnjs](https://cdnjs.com/libraries/font-awesome) and
 
 Then link it to your page as a stylesheet like below:
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /font-awesome/6.5.2/css/all.min.css">
+```{.html .numberLines}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax /libs/font-awesome/6.5.2/css/all.min.css">
 ```
 
 This will add **all font awesome icons**, but if you want to add only some icons, for example, brands icons only you can copy its link from cdn too like this:
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /font-awesome/6.5.2/css/brands.min.css">
+```{.html .numberLines}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax /libs/font-awesome/6.5.2/css/brands.min.css">
 ```
 
 **Method 2: Downloading the files**
@@ -332,7 +332,7 @@ This will add **all font awesome icons**, but if you want to add only some icons
 3. Copy the `webfonts` folder from the extracted folder and paste it in your project folder.
 4. Add the following link to your HTML file:
 
-```{.html}
+```{.html .numberLines}
 <link rel="stylesheet" href="./css/all.min.css">
 ```
 
@@ -340,7 +340,7 @@ After completing any of the above methods, we can use font awesome icons in our 
 
 To use a font-awesome icon like \faApple, we have to use the `<i>` tag with the `fa` class and the icon name class.
 
-```{.html}
+```{.html .numberLines}
 <i class="fa-brands fa-apple"></i>
 ```
 

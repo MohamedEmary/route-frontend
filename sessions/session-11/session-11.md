@@ -166,8 +166,7 @@ CDN stands for Content Delivery Network. You can use Bootstrap by linking the CS
     <title>Trying Bootstrap</title>
     <link 
       rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist
-          /css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist /css/bootstrap.min.css"
     >
   </head>
   <body>
@@ -179,8 +178,7 @@ CDN stands for Content Delivery Network. You can use Bootstrap by linking the CS
     .
     .
     <script 
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist
-          /js/bootstrap.bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist /js/bootstrap.bundle.min.js"
     >
     </script>
   </body>
@@ -264,8 +262,7 @@ You can override the default Bootstrap styles by writing your own CSS code and l
   <title>Trying Bootstrap</title>
   <link 
     rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist
-        /css/bootstrap.min.css"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist /css/bootstrap.min.css"
   >
   <link rel="stylesheet" href="./css/styles.css">
 </head>
