@@ -1,5 +1,5 @@
 ---
-title: \begin{title}\centering\vspace*{1cm}\rule{\textwidth}{0.05cm}\linebreak\vspace{0.5cm}{\Huge\bfseries Sesstion 10 \par}\vspace{0.1cm}\hrule\end{title}
+title: \begin{title}\centering\vspace*{1cm}\rule{\textwidth}{0.05cm}\linebreak\vspace{0.5cm}{\Huge\bfseries Session 10 \par}\vspace{0.1cm}\hrule\end{title}
 date: April 7, 2024 
 ---
 
