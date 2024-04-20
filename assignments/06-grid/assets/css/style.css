@@ -1,0 +1,386 @@
+/* ==========================General Styling========================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 450px) calc(450px / 2);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "phone phone learn-more learn-more"
+    "keyboard monitor monitor floppy"
+    "joystick tablet tablet floppy"
+    "twitter experience tv tv";
+}
+
+img {
+  width: 100%;
+}
+
+.caps,
+.mini-caps {
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.caps {
+  color: rgb(159, 163, 167);
+  font-size: 12px;
+}
+
+.mini-caps {
+  color: white;
+  font-size: 8px;
+}
+
+a {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+span.arrow {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arvo, sans-serif;
+  color: rgb(51, 51, 51);
+  margin: 15px 0px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p.gray {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(159, 163, 167);
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.learn-more,
+.keyboard,
+.joystick,
+.floppy,
+.floppy .bg,
+.phone,
+.experience,
+.twitter,
+.twitter .bg,
+.tablet,
+.tv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================First Row========================== */
+
+.phone {
+  justify-content: space-around;
+  grid-area: phone;
+  padding-top: 70px;
+}
+
+.phone h3 {
+  font-size: 22px;
+}
+
+.phone img {
+  width: clamp(200px, 25%, 35%);
+  align-self: flex-end;
+}
+
+.phone .left {
+  width: 29%;
+}
+
+/* ========================== */
+
+.learn-more {
+  grid-area: learn-more;
+  background-color: rgb(247, 248, 249);
+}
+
+.learn-more .inner {
+  text-align: center;
+  width: 50%;
+}
+
+.learn-more h1 {
+  font-size: 48px;
+}
+
+.learn-more a {
+  color: rgb(39, 185, 194);
+  font-size: 14px;
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+/* ==========================Second Row========================== */
+
+.keyboard {
+  grid-area: keyboard;
+  flex-direction: column;
+  background-color: rgb(240, 86, 56);
+  text-align: center;
+  padding: 30px;
+}
+
+.keyboard h3 {
+  color: white;
+  font-weight: 700;
+  max-width: 70%;
+}
+
+.keyboard img {
+  width: 75%;
+}
+
+.keyboard a {
+  color: rgb(255, 200, 10);
+}
+
+/* ========================== */
+
+.monitor {
+  padding-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: start;
+  grid-area: monitor;
+  position: relative;
+}
+
+.monitor .left {
+  width: 30%;
+  margin: 10px auto 0 auto;
+}
+
+/* TODO figure out how to use "relative" positioning on this img */
+.monitor img {
+  object-position: right;
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  left: -10%;
+}
+
+.monitor a {
+  color: rgb(39, 185, 194);
+}
+
+.monitor p {
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.monitor .right {
+  width: 50%;
+}
+
+/* ==========================Third Row========================== */
+
+.joystick {
+  flex-direction: column;
+  position: relative;
+  grid-area: joystick;
+}
+
+.joystick img {
+  width: 60%;
+  text-align: center;
+  position: relative;
+  left: -6%;
+}
+
+.joystick a {
+  color: rgb(39, 185, 194);
+}
+
+/* ========================== */
+
+.tablet {
+  grid-area: tablet;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-color: rgb(147, 182, 183);
+  background-image: url(../images/tablet-bg.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.tablet h3 {
+  font-weight: bold;
+  color: white;
+  padding-bottom: 30px;
+  max-width: 30%;
+  text-align: center;
+}
+
+.tablet .mini-caps {
+  background-color: rgb(250, 104, 79);
+  border-radius: 5px;
+  position: absolute;
+  padding: 5px;
+  left: 2%;
+  top: 4%;
+}
+
+.tablet img {
+  width: 90%;
+  position: relative;
+  right: 13%;
+}
+
+/* ========================== */
+
+.floppy {
+  grid-area: floppy;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(143, 118, 188);
+  padding: 0 50px;
+  color: white;
+}
+
+.floppy h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Arvo, sans-serif;
+  margin-top: 30px;
+}
+
+.floppy .bg {
+  background-color: rgb(129, 102, 176);
+  border-radius: 50%;
+  width: 370px;
+  height: 370px;
+  flex-direction: column;
+}
+
+.floppy .bg img {
+  width: 60%;
+}
+
+.floppy .bg .caps {
+  color: white;
+  margin: 20px 0;
+}
+
+.floppy p {
+  max-width: 80%;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.floppy .mini-caps {
+  font-size: 10px;
+}
+
+.floppy .tag {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 30%;
+  line-height: 25px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.floppy .tag img {
+  width: 12px;
+}
+
+.floppy button {
+  margin-top: 30px;
+  border: 0px;
+  background-color: rgb(255, 200, 10);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.floppy button a {
+  color: black;
+}
+
+/* ==========================Fourth Row========================== */
+
+.twitter {
+  grid-area: twitter;
+  background-color: #38d5f4;
+}
+
+.twitter h3 {
+  color: white;
+}
+
+.twitter img {
+  width: 20%;
+}
+
+.twitter .bg {
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #35cfed;
+  width: calc(450px / 2);
+  height: calc(450px / 2);
+}
+
+/* ========================== */
+
+.experience {
+  grid-area: experience;
+  flex-direction: column;
+  background-color: #f7f8f9;
+}
+
+.experience .mini-caps {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: rgb(123, 196, 36);
+}
+
+/* ========================== */
+
+.tv {
+  background-color: #2c2c2c;
+  grid-area: tv;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.tv h3 {
+  color: white;
+  max-width: 30%;
+}
+
+.tv img {
+  width: 30%;
+  object-fit: contain;
+}
