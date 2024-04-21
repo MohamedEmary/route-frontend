@@ -8,8 +8,8 @@
     />
     <title>Route Front-end Course</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -26,8 +26,8 @@
             <button
               type="button"
               class="list-group-item list-group-item-action"
-              data-toggle="modal"
-              data-target="#PDF"
+              data-bs-toggle="modal"
+              data-bs-target="#PDF"
             >
               Sessions Notes
             </button>
@@ -35,8 +35,8 @@
             <button
               type="button"
               class="list-group-item list-group-item-action"
-              data-toggle="modal"
-              data-target="#assignmentsModal"
+              data-bs-toggle="modal"
+              data-bs-target="#assignmentsModal"
             >
               Assignments
             </button> 
@@ -44,8 +44,8 @@
             <button
               type="button"
               class="list-group-item list-group-item-action"
-              data-toggle="modal"
-              data-target="#other"
+              data-bs-toggle="modal"
+              data-bs-target="#other"
             >
               Other
             </button>
@@ -67,11 +67,11 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="folder1ModalLabel">PDF Notes:</h5>
+            <h5 class="modal-title" id="folder1ModalLabel">Sessions Notes:</h5>
             <button
               type="button"
               class="close"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
@@ -152,7 +152,7 @@
             <button
               type="button"
               class="close"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
@@ -242,7 +242,7 @@
             <button
               type="button"
               class="close"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
@@ -266,9 +266,9 @@
         </div>
       </div>
     </div>
-    <footer class="footer mt-auto py-1 bg-light">
+    <footer class="footer mt-auto py-1">
       <div class="container text-center">
-        <span class="text-muted">Made by Mohamed Emary</span>
+        <span>Made by Mohamed Emary</span>
         <a href="https://github.com/MohamedEmary" class="github-link">
           <i class="fab fa-github"></i>
         </a>
@@ -283,7 +283,6 @@
         }
       };
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
