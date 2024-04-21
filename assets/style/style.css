@@ -1,5 +1,10 @@
+html {
+  height: 100%;
+  height: 100dvh;
+}
+
 .header {
-  color: #d8dee9;
+  color: #b8c1d9;
   font-size: 2.2em;
   font-weight: normal;
 }
@@ -11,28 +16,28 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #3b4252;
-  color: #d8dee9;
+  background-color: #2b3242;
+  color: #b8c1d9;
 }
 
 .github-link {
-  color: #d8dee9;
+  color: #b8c1d9;
   margin-left: 10px;
 }
 
 .github-link:hover {
-  color: #88c0d0;
+  color: #99d3df;
 }
 
 .list-group-item {
-  background-color: #434c5e;
-  color: #d8dee9;
+  background-color: #333c4e;
+  color: #b8c1d9;
   font-size: x-large;
 }
 
 .list-group-item:hover {
-  background-color: #88c0d0;
-  color: #2e3440;
+  background-color: #99d3df;
+  color: #1e2430;
 }
 
 ol li {
@@ -44,18 +49,18 @@ h5 {
 }
 
 body {
-  background-color: #2e3440;
-  color: #d8dee9;
+  background-color: #1e2430;
+  color: #b8c1d9;
 }
 
 .modal-content {
-  background-color: #3b4252;
-  color: #d8dee9;
+  background-color: #2b3242;
+  color: #b8c1d9;
 }
 
 .close {
   background-color: transparent;
-  color: #d8dee9;
+  color: #b8c1d9;
   opacity: 1;
   width: 30px;
   height: 30px;
@@ -69,17 +74,17 @@ body {
 }
 
 .close:hover {
-  color: #88c0d0;
+  color: #99d3df;
 }
 
 a {
-  color: #88c0d0;
+  color: #99d3df;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #d8dee9;
+  color: #b8c1d9;
   text-decoration: underline;
 }
 
