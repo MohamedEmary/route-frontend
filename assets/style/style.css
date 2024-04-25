@@ -1,16 +1,3 @@
-html {
-  height: 100%;
-  height: 100dvh;
-  overflow: auto;
-}
-
-body {
-  max-height: 100vh;
-  max-height: 100dvh;
-  background-color: #1e2430;
-  color: #b8c1d9;
-}
-
 ol li {
   font-size: large;
 }
@@ -20,18 +7,17 @@ h5 {
 }
 
 a {
-  color: #99d3df;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #b3b3b3;
 }
 
 a:hover {
-  color: #b8c1d9;
   text-decoration: underline;
+  color: #ffffff;
 }
 
 .header {
-  color: #b8c1d9;
   font-size: 2.2em;
   font-weight: normal;
 }
@@ -43,38 +29,19 @@ a:hover {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #2b3242;
-  color: #b8c1d9;
 }
 
 .github-link {
-  color: #b8c1d9;
   margin-left: 10px;
 }
 
-.github-link:hover {
-  color: #99d3df;
-}
-
 .list-group-item {
-  background-color: #333c4e;
-  color: #b8c1d9;
   font-size: x-large;
-}
-
-.list-group-item:hover {
-  background-color: #99d3df;
-  color: #1e2430;
-}
-
-.modal-content {
-  background-color: #2b3242;
-  color: #b8c1d9;
+  width: 35%;
+  margin: 2px auto;
 }
 
 .close {
-  background-color: transparent;
-  color: #b8c1d9;
   opacity: 1;
   width: 30px;
   height: 30px;
@@ -83,15 +50,67 @@ a:hover {
   text-align: center;
   padding: 0;
   border-radius: 50%;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  background-color: transparent;
   border: 0px;
+  transition: color 0.3s ease;
 }
 
 .close:hover {
-  color: #99d3df;
+  color: #b3b3b3;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-content span {
+  width: 200px;
+  text-align: left;
+}
+
+.button-content i {
+  margin-right: 10px;
+}
+
+.fa-file-pen {
+  margin-left: 3px;
+}
+
+.list-group-item,
+footer {
+  background-color: rgb(30, 30, 30);
+}
+
+.list-group-item:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.github-link {
+  color: white;
+}
+
+.github-link:hover {
+  color: #b3b3b3;
+}
+
+.modal-content {
+  background-color: rgb(30, 30, 30);
+}
+
+th {
+  color: white;
 }
 
 /* ===================================== */
+@media (max-width: 768px) {
+  .list-group-item {
+    font-size: large;
+    width: 80%;
+  }
+}
 
 @media (max-width: 576px) {
   .header {
@@ -104,9 +123,6 @@ a:hover {
     font-size: x-large;
   }
   ol li {
-    font-size: large;
-  }
-  .list-group-item {
     font-size: large;
   }
 }
