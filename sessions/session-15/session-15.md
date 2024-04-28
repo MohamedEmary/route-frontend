@@ -325,7 +325,7 @@ In JS:
 
 ```{.js .numberLines}
 var list = document.getElementById("list");
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 6; i++) {
   if (i % 2 === 0) {
     var item = "<li class='red'>Item " + i + "</li>";
   } else {
