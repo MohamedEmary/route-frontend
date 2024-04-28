@@ -140,3 +140,144 @@ nav i {
   color: var(--primary-black);
   font-size: 25px;
 }
+
+/* ====================HEADER==================== */
+
+header {
+  min-height: 100vh;
+  background-color: var(--gray-bg);
+  display: flex;
+  align-items: center;
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .inner > div {
+  max-width: 50%;
+}
+
+header img {
+  width: 85%;
+  display: block;
+  margin: auto;
+}
+
+header img:hover {
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+header h2.caps {
+  color: var(--secondary-black);
+  font-family: var(--secondary-font);
+  font-size: 65px;
+  font-weight: 600;
+}
+
+header p {
+  color: var(--secondary-gray);
+  margin: 20px 0;
+  max-width: 80%;
+}
+
+header button {
+  background-color: var(--red-icon);
+  border: 0px;
+  padding: 14px 28px;
+  font-size: 16px;
+  margin-right: 20px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+header button:hover {
+  background-color: var(--red-bg);
+}
+
+header button a {
+  color: white;
+}
+
+a.video {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  transition: all var(--duration) ease;
+  position: relative;
+}
+
+a.video:hover {
+  color: var(--red-bg);
+}
+
+.icon-wrapper {
+  display: inline;
+  position: relative;
+  z-index: 1;
+}
+
+a.video i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+a.video i::after {
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    var(--red-bg) 0 50%,
+    transparent 50% 100%
+  );
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  bottom: calc(-50% - 5px);
+  z-index: -1;
+}
