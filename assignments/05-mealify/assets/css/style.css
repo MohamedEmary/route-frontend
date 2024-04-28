@@ -281,3 +281,131 @@ a.video i::after {
   bottom: calc(-50% - 5px);
   z-index: -1;
 }
+
+/* ====================CHEFS==================== */
+
+.chefs {
+  overflow: auto;
+}
+
+.chefs .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--inner-margin);
+  padding: var(--inner-padding);
+}
+
+.chefs img {
+  width: 100%;
+}
+
+.chefs div.caps {
+  color: var(--secondary-black);
+  margin-bottom: 25px;
+}
+
+.chefs .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+  align-items: stretch;
+  text-align: center;
+}
+
+.chefs .cards .card {
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  width: calc(100% / 3);
+  flex-grow: 1;
+  position: relative;
+  transition-duration: calc(var(--duration) + 0.2s);
+  overflow: hidden;
+}
+
+.cards .card .content {
+  padding: 10px var(--card-content-sides-padding);
+  padding-bottom: 25px;
+}
+
+.cards .card h3 {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: var(--primary-black);
+}
+
+.card .content div,
+.card .content p {
+  color: var(--primary-gray);
+}
+
+.card .content div {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.card .content p {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.card img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+aside ul li {
+  display: inline-block;
+  font-size: 18px;
+  color: rgba(55, 55, 63, 0.4);
+  padding: 10px;
+  transition-duration: var(--duration);
+}
+
+aside ul li:hover {
+  color: rgb(55, 55, 63, 0.9);
+}
+
+.card aside {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  justify-content: center;
+  right: 10px;
+  top: 50px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(calc(100% + 10px));
+  opacity: 0;
+  transition-duration: var(--duration);
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card:hover aside {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.card h3 {
+  position: relative;
+}
+
+.card h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2 * var(--card-content-sides-padding));
+  background-image: url(../images/wave.svg);
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
