@@ -1,0 +1,142 @@
+/* ====================General Styling==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-black: #212529;
+  --secondary-black: #37373f;
+
+  --primary-gray: #7f7f90;
+  --secondary-gray: #4f4f5a;
+  --tertiary-gray: #7d7d7d;
+
+  --red-bg: #e51414;
+  --red-icon: #ce1212;
+  --gray-bg: #eeeeee;
+
+  --primary-font: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --secondary-font: "Amatic SC", var(--primary-font);
+
+  --duration: 0.3s;
+
+  --inner-margin: 50px auto;
+  --inner-padding: 40px 5px;
+
+  --card-shadow: #0000001a 3px 3px 15px 0px;
+  --card-content-sides-padding: 25px;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+.inner {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+h3 {
+  color: rgb(33, 37, 41);
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+h2.caps {
+  font-family: inter;
+  font-weight: normal;
+  color: var(--primary-gray);
+  font-size: 14px;
+}
+
+div.caps {
+  font-family: var(--secondary-font);
+  font-size: 50px;
+}
+
+div.caps span {
+  color: var(--red-icon);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ====================Navbar==================== */
+
+nav {
+  padding: 25px 0;
+  box-shadow: #0000001b 0px 0px 14px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: white;
+}
+
+nav .inner {
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 a {
+  font-size: 30px;
+  color: rgb(33, 37, 41);
+}
+
+nav h1::after {
+  content: ".";
+  color: var(--red-icon);
+  font-weight: bold;
+}
+
+nav ul {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  padding: 5px;
+}
+
+nav ul li::after {
+  content: "";
+  height: 2px;
+  background-color: var(--red-icon);
+  width: 0;
+  bottom: -3px;
+  left: 0;
+  position: absolute;
+  transition: width var(--duration) ease-in-out;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+nav ul a {
+  color: var(--primary-gray);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+nav i {
+  color: var(--primary-black);
+  font-size: 25px;
+}
