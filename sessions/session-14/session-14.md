@@ -87,7 +87,7 @@ JS story in video and where did its name come from.
     5. Undefined
   - Non-primitive
 - To know the data type of a variable use `typeof`
-- JS is a loosely typed language which means you can change the data type of a variable.
+- JS is a loosely typed language which means you don't have to declare the data type of a variable.
   <!-- - Languages that force you to declare the data type of a variable are called statically typed languages. -->
 - strings are written inside `"string"` or `'string'` or `` `String` `` (backticks)
 - `typeof null` is `object` which is a bug in JS
