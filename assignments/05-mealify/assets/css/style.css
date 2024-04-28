@@ -409,3 +409,83 @@ aside ul li:hover {
   background-repeat: repeat-x;
   overflow: hidden;
 }
+
+/* ====================GALLERY==================== */
+
+.gallery {
+  background-color: var(--gray-bg);
+  overflow: auto;
+}
+
+.gallery .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: var(--inner-margin);
+  padding: var(--inner-padding);
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  transition-duration: var(--duration);
+}
+
+.gallery .cols {
+  margin-top: 20px;
+}
+
+.gallery .inner .cols {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  gap: 10px;
+}
+
+.cols > div > div {
+  border: 5px solid white;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cols > div .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transform: translateY(100%);
+  transition-duration: var(--duration);
+}
+
+.cols > div > div:hover .overlay {
+  transform: translateY(0%);
+}
+
+.cols > div > div:hover img {
+  scale: 1.1;
+}
+
+.cols > div .overlay p {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.cols > div .overlay h3 {
+  color: white;
+  font-size: 24px;
+  font-family: inter;
+}
