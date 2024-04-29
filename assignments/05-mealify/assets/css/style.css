@@ -779,3 +779,97 @@ footer .newsletter h3,
 footer .in-touch h3 {
   margin-top: 0;
 }
+
+/* ====================MEDIA QUERIES==================== */
+
+@media screen and (max-width: 993px) {
+  .inner {
+    width: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  /* ===========Navbar=========== */
+  nav ul {
+    display: none;
+  }
+
+  nav h1::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 6 Free";
+    color: var(--primary-black);
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  nav h1::before::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 6 Free";
+    color: var(--primary-black);
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  /* ===========Header=========== */
+  header .inner {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .inner > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  header .inner .picture img {
+    padding: 30px;
+  }
+
+  header .content > p {
+    padding: 10px 0;
+  }
+
+  /* ===========Chefs=========== */
+  .chefs .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chefs .cards .card {
+    width: 80%;
+  }
+  .chefs .cards .card:hover {
+    scale: 1.05;
+  }
+
+  /* ===========Gallery=========== */
+  .gallery .inner .cols {
+    flex-wrap: wrap;
+  }
+
+  /* ===========Contact=========== */
+  .contact .inner {
+    margin: 0 30px;
+  }
+  .contact .contact-info {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .contact-info > div {
+    width: 100%;
+    margin: 0 30px;
+  }
+
+  /* ===========Footer=========== */
+  footer .inner {
+    flex-direction: column;
+  }
+}
