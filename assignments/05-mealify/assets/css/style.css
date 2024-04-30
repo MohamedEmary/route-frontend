@@ -838,7 +838,16 @@ footer .in-touch h3 {
     padding: 10px 0;
   }
 
+  a.video {
+    display: block;
+    margin-top: 20px;
+  }
+
   /* ===========Chefs=========== */
+  .chefs .inner {
+    padding: 50px 0;
+  }
+
   .chefs .cards {
     flex-direction: column;
     align-items: center;
@@ -851,13 +860,23 @@ footer .in-touch h3 {
   }
 
   /* ===========Gallery=========== */
+
+  .gallery .inner {
+    padding: 50px 0;
+  }
+
   .gallery .inner .cols {
     flex-wrap: wrap;
   }
 
+  .gallery .cols {
+    width: 90%;
+  }
+
   /* ===========Contact=========== */
   .contact .inner {
-    margin: 0 30px;
+    padding: 50px 20px;
+    box-sizing: border-box;
   }
   .contact .contact-info {
     flex-wrap: nowrap;
@@ -866,6 +885,11 @@ footer .in-touch h3 {
   .contact-info > div {
     width: 100%;
     margin: 0 30px;
+  }
+
+  .contact span {
+    flex-direction: column;
+    gap: 0;
   }
 
   /* ===========Footer=========== */
