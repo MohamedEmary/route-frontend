@@ -76,13 +76,82 @@ html {
   scroll-behavior: smooth;
 }
 
+nav ul,
+header,
+header .inner,
+.chefs .cards,
+.gallery .inner,
+.gallery .inner .cols,
+.cols > div .overlay,
+.contact .contact-info,
+.contact-info > div,
+footer .social .top,
+footer .social .down ul,
+footer .in-touch ul li,
+footer .in-touch ul li i {
+  display: flex;
+  align-items: center;
+}
+
+a.video,
+.chefs .cards,
+.gallery .inner .cols,
+.contact-info > div i.fa,
+form,
+footer .social h3 {
+  text-align: center;
+}
+
+img,
+nav,
+nav ul li:hover::after,
+.cols > div .overlay,
+.contact iframe,
+.contact .contact-info,
+form,
+form input,
+form textarea,
+form > span,
+footer .social p,
+footer .social h3,
+footer .social h3::after,
+footer .newsletter > div,
+footer .newsletter input,
+footer .newsletter ul {
+  width: 100%;
+}
+
+header button a,
+.cols > div .overlay,
+.cols > div .overlay h3,
+.contact-info > div i.fa,
+form button,
+footer .newsletter button,
+footer h2,
+footer h3,
+footer .in-touch a,
+footer .social .down a,
+footer {
+  color: white;
+}
+
+nav ul li,
+a.video,
+.icon-wrapper,
+.chefs .cards .card,
+.card h3,
+.cols > div > div,
+footer .social p,
+footer .social h3,
+footer .newsletter ul {
+  position: relative;
+}
 /* ====================Navbar==================== */
 
 nav {
   padding: 25px 0;
   box-shadow: #0000001b 0px 0px 14px 0px;
   position: fixed;
-  width: 100%;
   z-index: 99;
   background-color: white;
 }
@@ -105,13 +174,10 @@ nav h1::after {
 
 nav ul {
   width: 25%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav ul li {
-  position: relative;
   padding: 5px;
 }
 
@@ -124,10 +190,6 @@ nav ul li::after {
   left: 0;
   position: absolute;
   transition: width var(--duration) ease-in-out;
-}
-
-nav ul li:hover::after {
-  width: 100%;
 }
 
 nav ul a {
@@ -146,14 +208,10 @@ nav i {
 header {
   min-height: 100vh;
   background-color: var(--gray-bg);
-  display: flex;
-  align-items: center;
 }
 
 header .inner {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 header .inner > div {
@@ -235,16 +293,10 @@ header button:hover {
   background-color: var(--red-bg);
 }
 
-header button a {
-  color: white;
-}
-
 a.video {
   color: black;
   font-weight: bold;
-  text-align: center;
   transition: all var(--duration) ease;
-  position: relative;
 }
 
 a.video:hover {
@@ -253,7 +305,6 @@ a.video:hover {
 
 .icon-wrapper {
   display: inline;
-  position: relative;
   z-index: 1;
 }
 
@@ -289,16 +340,11 @@ a.video i::after {
 }
 
 .chefs .inner {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: var(--inner-margin);
   padding: var(--inner-padding);
-}
-
-.chefs img {
-  width: 100%;
 }
 
 .chefs div.caps {
@@ -307,12 +353,10 @@ a.video i::after {
 }
 
 .chefs .cards {
-  display: flex;
   justify-content: center;
   gap: 30px;
   padding: 10px;
   align-items: stretch;
-  text-align: center;
 }
 
 .chefs .cards .card {
@@ -320,7 +364,6 @@ a.video i::after {
   border-radius: 10px;
   width: calc(100% / 3);
   flex-grow: 1;
-  position: relative;
   transition-duration: calc(var(--duration) + 0.2s);
   overflow: hidden;
 }
@@ -371,10 +414,7 @@ aside ul li:hover {
 
 .card aside {
   position: absolute;
-  display: flex;
-  flex-direction: column;
   width: min-content;
-  justify-content: center;
   right: 10px;
   top: 50px;
   border-radius: 7px;
@@ -391,10 +431,6 @@ aside ul li:hover {
 .card:hover aside {
   transform: translateX(0);
   opacity: 1;
-}
-
-.card h3 {
-  position: relative;
 }
 
 .card h3::before {
@@ -418,16 +454,13 @@ aside ul li:hover {
 }
 
 .gallery .inner {
-  display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   margin: var(--inner-margin);
   padding: var(--inner-padding);
 }
 
 .gallery img {
-  width: 100%;
   display: block;
   transition-duration: var(--duration);
 }
@@ -437,17 +470,14 @@ aside ul li:hover {
 }
 
 .gallery .inner .cols {
-  display: flex;
   justify-content: center;
   align-items: flex-start;
-  text-align: center;
   gap: 10px;
 }
 
 .cols > div > div {
   border: 5px solid white;
   margin-bottom: 10px;
-  position: relative;
   z-index: 1;
   overflow: hidden;
 }
@@ -458,13 +488,9 @@ aside ul li:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
   transform: translateY(100%);
@@ -485,7 +511,6 @@ aside ul li:hover {
 }
 
 .cols > div .overlay h3 {
-  color: white;
   font-size: 24px;
   font-family: inter;
 }
@@ -497,7 +522,6 @@ aside ul li:hover {
 }
 
 .contact .inner {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -506,19 +530,15 @@ aside ul li:hover {
 }
 
 .contact iframe {
-  width: 100%;
   height: 350px;
   margin-top: 25px;
 }
 
 .contact .contact-info {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   --contact-gab: 15px;
   gap: var(--contact-gab);
-  width: 100%;
   margin: 25px 0;
 }
 
@@ -527,8 +547,6 @@ aside ul li:hover {
   box-sizing: border-box;
   padding: 25px;
   width: calc(50% - var(--contact-gab) / 2);
-  display: flex;
-  align-items: center;
 }
 
 .contact-info > div i.fa {
@@ -539,8 +557,6 @@ aside ul li:hover {
   line-height: 50px;
   border-radius: 50%;
   margin-right: 15px;
-  text-align: center;
-  color: white;
   background-color: var(--red-icon);
 }
 
@@ -558,10 +574,8 @@ aside ul li:hover {
 }
 
 form {
-  width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  text-align: center;
   --input-gaps: 7px;
   box-shadow: rgba(0, 0, 0, 0.078) 0px 0px 30px 0px;
 }
@@ -569,7 +583,6 @@ form {
 form input,
 form textarea {
   box-sizing: border-box;
-  width: 100%;
   margin: var(--input-gaps) 0;
   padding: 15px;
   border: 2px solid #e8e3e3;
@@ -582,7 +595,6 @@ form textarea:focus {
 }
 
 form > span {
-  width: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -595,7 +607,6 @@ form button {
   font-size: 15px;
   border-radius: 25px;
   border: 0px;
-  color: white;
   background-color: var(--red-icon);
   cursor: pointer;
 }
@@ -604,14 +615,12 @@ form button {
 
 footer {
   display: flex;
-  color: white;
   background-image: linear-gradient(#0009, #0009),
     url(../images/textured-metal-background.jpg);
   padding: var(--inner-padding);
 }
 
 footer .inner {
-  display: flex;
   gap: 30px;
 }
 
@@ -620,8 +629,6 @@ footer img {
 }
 
 footer .social .top {
-  display: flex;
-  align-items: center;
   gap: 10px;
 }
 
@@ -634,12 +641,9 @@ footer .social .top h2::after {
 footer .social p,
 footer .social h3 {
   margin-top: 10px;
-  position: relative;
-  width: 100%;
 }
 
 footer .social h3 {
-  text-align: center;
   padding: 10px 0;
 }
 
@@ -653,11 +657,6 @@ footer h2 {
   font-size: 30px;
 }
 
-footer h2,
-footer h3 {
-  color: white;
-}
-
 footer .social h3::after {
   content: "";
   height: 1px;
@@ -665,30 +664,21 @@ footer .social h3::after {
   left: 0;
   background-color: var(--tertiary-gray);
   position: absolute;
-  width: 100%;
 }
 
 footer .social .down ul {
   margin-top: 10px;
-  display: flex;
   justify-content: space-around;
-  align-items: center;
   font-size: 24px;
 }
 
-footer .social .down a {
-  color: white;
-}
-
 footer .newsletter > div {
-  width: 100%;
   display: flex;
   margin: 15px 0;
   gap: 5px;
 }
 
 footer .newsletter input {
-  width: 100%;
   outline: none;
   padding: 10px;
   border: 0;
@@ -697,7 +687,6 @@ footer .newsletter input {
 footer .newsletter button {
   min-width: fit-content;
   padding: 10px;
-  color: white;
   background-color: var(--red-bg);
   font-size: 16px;
   border: 0px;
@@ -705,10 +694,8 @@ footer .newsletter button {
 
 footer .newsletter ul {
   display: flex;
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  position: relative;
   column-gap: 20px;
 }
 
@@ -738,17 +725,11 @@ footer .in-touch {
   flex-direction: column;
 }
 
-footer .in-touch a {
-  color: white;
-}
-
 footer .in-touch h3 {
   margin-bottom: 20px;
 }
 
 footer .in-touch ul li {
-  display: flex;
-  align-items: center;
   gap: 40px;
   margin-left: -40px;
 }
@@ -756,8 +737,6 @@ footer .in-touch ul li {
 footer .in-touch ul li i {
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
   color: var(--red-icon);
   font-size: 22px;
   cursor: pointer;
@@ -786,9 +765,14 @@ footer .in-touch h3 {
 
 @media screen and (max-width: 993px) {
   .inner {
-    width: 100%;
     margin-right: 30px;
     margin-left: 30px;
+  }
+
+  .inner,
+  header .inner > div,
+  .contact-info > div {
+    width: 100%;
   }
 
   /* ===========Navbar=========== */
@@ -829,7 +813,6 @@ footer .in-touch h3 {
 
   header .inner > div {
     max-width: 100%;
-    width: 100%;
   }
 
   header .inner .picture img {
@@ -885,7 +868,6 @@ footer .in-touch h3 {
     flex-direction: column;
   }
   .contact-info > div {
-    width: 100%;
     margin: 0 30px;
   }
 
