@@ -204,20 +204,20 @@ nav i {
   font-size: 25px;
 }
 
-body:not(body:has(:target)) li a[href="#home"],
-body:has(.home:target) li a[href="#home"],
-body:has(.contact:target) li a[href="#contact"],
-body:has(.gallery:target) li a[href="#gallery"],
-body:has(.chefs:target) li a[href="#chefs"] {
+body:not(:has(:target)) li a[href="#home"],
+body:has(#home:target) li a[href="#home"],
+body:has(#contact:target) li a[href="#contact"],
+body:has(#gallery:target) li a[href="#gallery"],
+body:has(#chefs:target) li a[href="#chefs"] {
   color: #000;
   font-weight: 600;
 }
 
-body:not(body:has(:target)) li a[href="#home"]::after,
-body:has(.home:target) li a[href="#home"]::after,
-body:has(.contact:target) li a[href="#contact"]::after,
-body:has(.gallery:target) li a[href="#gallery"]::after,
-body:has(.chefs:target) li a[href="#chefs"]::after {
+body:not(:has(:target)) li a[href="#home"]::after,
+body:has(#home:target) li a[href="#home"]::after,
+body:has(#contact:target) li a[href="#contact"]::after,
+body:has(#gallery:target) li a[href="#gallery"]::after,
+body:has(#chefs:target) li a[href="#chefs"]::after {
   width: 100%;
 }
 
