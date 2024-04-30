@@ -104,7 +104,7 @@ footer .social h3 {
 
 img,
 nav,
-nav ul li:hover::after,
+nav ul li a:hover::after,
 .cols > div .overlay,
 .contact iframe,
 .contact .contact-info,
@@ -175,13 +175,14 @@ nav h1::after {
 nav ul {
   width: 25%;
   justify-content: space-between;
+  gap: 10px;
 }
 
 nav ul li {
   padding: 5px;
 }
 
-nav ul li::after {
+nav ul li a::after {
   content: "";
   height: 2px;
   background-color: var(--red-icon);
@@ -201,6 +202,23 @@ nav ul a {
 nav i {
   color: var(--primary-black);
   font-size: 25px;
+}
+
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.home:target) li a[href="#home"],
+body:has(.contact:target) li a[href="#contact"],
+body:has(.gallery:target) li a[href="#gallery"],
+body:has(.chefs:target) li a[href="#chefs"] {
+  color: #000;
+  font-weight: 600;
+}
+
+body:not(body:has(:target)) li a[href="#home"]::after,
+body:has(.home:target) li a[href="#home"]::after,
+body:has(.contact:target) li a[href="#contact"]::after,
+body:has(.gallery:target) li a[href="#gallery"]::after,
+body:has(.chefs:target) li a[href="#chefs"]::after {
+  width: 100%;
 }
 
 /* ====================HEADER==================== */
