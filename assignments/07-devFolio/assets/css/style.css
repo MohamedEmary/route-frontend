@@ -1,0 +1,560 @@
+nav .nav-item a::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  position: absolute;
+  transition-duration: 0.6s;
+  background-color: white;
+}
+
+nav .nav-item:hover a::before {
+  width: 50%;
+}
+
+body:not(:has(:target)) li a[href="#home"]::before,
+body:has(#home:target) li a[href="#home"]::before,
+body:has(#services:target) li a[href="#services"]::before,
+body:has(#portfolio:target) li a[href="#portfolio"]::before,
+body:has(#about:target) li a[href="#about"]::before,
+body:has(#contact:target) li a[href="#contact"]::before,
+body:has(#blog:target) li a[href="#blog"]::before {
+  width: 50%;
+  background-color: white;
+}
+
+.dropdown .dropdown-item:hover {
+  color: var(--bs-primary) !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu .dropdown-menu {
+  display: none !important;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block !important;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 40px;
+  left: 100%;
+}
+
+/* ============================ */
+
+header {
+  background: url(../images/hero-bg.jpg) center/cover fixed;
+}
+
+header h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+.animation-text::after {
+  content: "|";
+  color: white;
+  animation: cursor-opacity 1.4s infinite;
+  font-size: 43px;
+  font-weight: bold;
+}
+
+@keyframes cursor-opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animation-text::before {
+  content: "";
+  color: white;
+  animation: text 15s infinite;
+  font-size: 43px;
+  font-weight: bold;
+}
+
+@keyframes text {
+  0% {
+    content: "";
+  }
+  1% {
+    content: "D";
+  }
+  2% {
+    content: "De";
+  }
+  3% {
+    content: "Dev";
+  }
+  4% {
+    content: "Deve";
+  }
+  5% {
+    content: "Devel";
+  }
+  6% {
+    content: "Develo";
+  }
+  7% {
+    content: "Develop";
+  }
+  8% {
+    content: "Develope";
+  }
+  9% {
+    content: "Developer";
+  }
+  14% {
+    content: "Developer";
+  }
+  15% {
+    content: "Develope";
+  }
+  16% {
+    content: "Develop";
+  }
+  17% {
+    content: "Develo";
+  }
+  18% {
+    content: "Devel";
+  }
+  19% {
+    content: "Deve";
+  }
+  20% {
+    content: "Dev";
+  }
+  21% {
+    content: "De";
+  }
+  22% {
+    content: "D";
+  }
+  23% {
+    content: "";
+  }
+  24% {
+    content: "D";
+  }
+  25% {
+    content: "De";
+  }
+  26% {
+    content: "Des";
+  }
+  27% {
+    content: "Desi";
+  }
+  28% {
+    content: "Desig";
+  }
+  29% {
+    content: "Design";
+  }
+  30% {
+    content: "Designe";
+  }
+  31% {
+    content: "Designer";
+  }
+  36% {
+    content: "Designer";
+  }
+  37% {
+    content: "Designe";
+  }
+  38% {
+    content: "Design";
+  }
+  39% {
+    content: "Desig";
+  }
+  40% {
+    content: "Desi";
+  }
+  41% {
+    content: "Des";
+  }
+  42% {
+    content: "De";
+  }
+  43% {
+    content: "D";
+  }
+  44% {
+    content: "";
+  }
+  45% {
+    content: "F";
+  }
+  46% {
+    content: "Fr";
+  }
+  47% {
+    content: "Fre";
+  }
+  48% {
+    content: "Free";
+  }
+  49% {
+    content: "Freel";
+  }
+  50% {
+    content: "Freela";
+  }
+  51% {
+    content: "Freelan";
+  }
+  52% {
+    content: "Freelanc";
+  }
+  53% {
+    content: "Freelance";
+  }
+  54% {
+    content: "Freelancer";
+  }
+  59% {
+    content: "Freelancer";
+  }
+  60% {
+    content: "Freelance";
+  }
+  61% {
+    content: "Freelanc";
+  }
+  62% {
+    content: "Freelan";
+  }
+  63% {
+    content: "Freela";
+  }
+  64% {
+    content: "Freel";
+  }
+  65% {
+    content: "Free";
+  }
+  66% {
+    content: "Fre";
+  }
+  67% {
+    content: "Fr";
+  }
+  68% {
+    content: "F";
+  }
+  69% {
+    content: "";
+  }
+  70% {
+    content: "P";
+  }
+  71% {
+    content: "Ph";
+  }
+  72% {
+    content: "Pho";
+  }
+  73% {
+    content: "Phot";
+  }
+  74% {
+    content: "Photo";
+  }
+  75% {
+    content: "Photog";
+  }
+  76% {
+    content: "Photogr";
+  }
+  77% {
+    content: "Photogra";
+  }
+  78% {
+    content: "Photograp";
+  }
+  79% {
+    content: "Photograph";
+  }
+  80% {
+    content: "Photographer";
+  }
+  85% {
+    content: "Photographer";
+  }
+  86% {
+    content: "Photograph";
+  }
+  87% {
+    content: "Photograp";
+  }
+  88% {
+    content: "Photogra";
+  }
+  89% {
+    content: "Photogr";
+  }
+  90% {
+    content: "Photog";
+  }
+  91% {
+    content: "Photo";
+  }
+  92% {
+    content: "Phot";
+  }
+  93% {
+    content: "Pho";
+  }
+  94% {
+    content: "Ph";
+  }
+  95% {
+    content: "P";
+  }
+  100% {
+    content: "";
+  }
+}
+
+/* ============================ */
+
+.progress {
+  height: 10px !important;
+}
+
+.about-header,
+.in-touch-header,
+.msg-form {
+  width: fit-content;
+}
+
+.services .container > p {
+  margin: auto;
+}
+
+.about-header::after,
+.in-touch-header::after,
+.msg-form::after,
+.services .container > p::after,
+.portfolio .container > p::after,
+.blog .container > p::after {
+  content: "";
+  height: 3px;
+  background: var(--bs-primary);
+  bottom: 0;
+  position: absolute;
+}
+
+.about-header::after,
+.in-touch-header::after,
+.msg-form::after {
+  left: 0;
+  width: 70%;
+}
+
+.services .container > p::after,
+.portfolio .container > p::after,
+.blog .container > p::after {
+  width: 5%;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+
+.services .card-body > i {
+  border: 10px solid var(--bs-primary);
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  box-sizing: content-box;
+}
+.services .card-body > i,
+.in-touch ul.social > li,
+form button,
+.blog a {
+  transition-duration: 0.4s;
+}
+.services .card-body:hover > i,
+.in-touch ul.social > li:hover {
+  background-color: var(--bs-primary);
+  color: white;
+  border-color: var(--bs-cyan) !important;
+}
+
+.analytics,
+.contact {
+  position: relative;
+}
+
+.analytics::before,
+.contact::before,
+.img-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.analytics::before {
+  background: url(../images/counters-bg.jpg) center/cover fixed;
+}
+.contact::before {
+  background: url(../images/overlay-bg.jpg) center/cover fixed;
+}
+.img-slider::before {
+  background: url(../images/overlay-bg.jpg) center/cover fixed;
+}
+
+.analytics .card-body i {
+  border: 10px solid var(--bs-cyan) !important;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  box-sizing: content-box;
+}
+
+.analytics .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.portfolio .container .card:hover img {
+  scale: 1.3;
+  transition: 1s ease;
+}
+
+.img-slider .container {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.carousel-indicators > button {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.carousel-indicators > button.active {
+  background-color: white !important;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 70px;
+}
+
+.blog .card-footer img {
+  width: 33px;
+  margin-right: 5px;
+}
+
+.blog .blog-img1::after,
+.blog .blog-img2::after,
+.blog .blog-img3::after {
+  content: "travel";
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  bottom: 0;
+  left: 50%;
+  padding: 5px 10px;
+  background-color: var(--bs-primary);
+  color: white;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.carousel-item img {
+  width: 150px;
+}
+
+.blog .blog-img2::after,
+.blog .blog-img3::after {
+  content: "web design";
+}
+
+.blog a:hover {
+  color: var(--bs-primary) !important;
+}
+
+.contact .container {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+form input,
+form textarea {
+  outline: none;
+}
+
+form button:hover {
+  background-color: var(--bs-cyan) !important;
+}
+
+.in-touch ul.social > li {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+footer {
+  background-color: #0062d3;
+}
+
+i.bi-arrow-up-short {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  background-color: #0872ec;
+  bottom: 10px;
+  right: 10px;
+  transition-duration: 0.3s;
+}
+
+i.bi-arrow-up-short:hover{
+  background-color: #3490f9;
+
+}
+
+
+body:has(#home:target) i.bi-arrow-up-short{
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  header h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .animation-text::before,
+  .animation-text::after {
+    font-size: 33px;
+  }
+}
