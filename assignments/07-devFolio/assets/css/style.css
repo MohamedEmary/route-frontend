@@ -538,23 +538,27 @@ i.bi-arrow-up-short {
   transition-duration: 0.3s;
 }
 
-i.bi-arrow-up-short:hover{
+i.bi-arrow-up-short:hover {
   background-color: #3490f9;
-
 }
 
-
-body:has(#home:target) i.bi-arrow-up-short{
+body:has(#home:target) i.bi-arrow-up-short {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
   header h1 {
     font-size: 40px;
+    text-align: center;
     font-weight: bold;
   }
   .animation-text::before,
   .animation-text::after {
     font-size: 33px;
+  }
+  .about .skills > .upper-left {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
   }
 }
