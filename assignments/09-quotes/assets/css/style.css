@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap");
+@font-face {
+  font-family: willow;
+  src: url(../fonts/Willow.ttf);
+}
+
+.content {
+  font-family: Mina, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+.author {
+  font-family: willow, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.btn {
+  min-width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}

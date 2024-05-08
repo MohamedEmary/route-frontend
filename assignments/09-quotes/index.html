@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Javascript, quotes, goodreads, reading, books" />
+    <meta name="author" content="Mohamed Emary" />
+    <meta
+      name="description"
+      content="A webpage that displays a random quote each time you press on a button" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Quote Generator</title>
+  </head>
+  <body>
+    <nav class="bg-black">
+      <h1 class="text-center py-2 text-white">Random Quote Generator</h1>
+    </nav>
+    <main
+      class="d-flex justify-content-center text-center align-items-center vh-100">
+      <div class="container">
+        <div class="row">
+          <p id="content" class="content"></p>
+          <h2 id="author" class="author fw-bold fs-5 fst-italic"></h2>
+          <button
+            onclick="getRandomQuote()"
+            class="btn bg-black col-2 m-auto text-white">
+            Get a Quote
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
