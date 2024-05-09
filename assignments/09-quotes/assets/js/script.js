@@ -116,18 +116,8 @@ var quotes = [
   },
   {
     content:
-      "Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.",
-    author: "Steve Jobs",
-  },
-  {
-    content:
       "Insanity is doing the same thing, over and over again, but expecting different results.",
     author: "Narcotics Anonymous",
-  },
-  {
-    content:
-      "I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they're right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together.",
-    author: "Marilyn Monroe",
   },
   {
     content:
@@ -138,11 +128,6 @@ var quotes = [
     content:
       "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
     author: "H. Jackson Brown Jr.",
-  },
-  {
-    content:
-      "All that is gold does not glitter,\nNot all those who wander are lost;\nThe old that is strong does not wither,\nDeep roots are not reached by the frost.\n\nFrom the ashes a fire shall be woken,\nA light from the shadows shall spring;\nRenewed shall be blade that was broken,\nThe crownless again shall be king.",
-    author: "J.R.R. Tolkien",
   },
   {
     content:
@@ -238,11 +223,6 @@ var quotes = [
   },
   {
     content:
-      "I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate that when I fall asleep your eyes close.",
-    author: "Pablo Neruda",
-  },
-  {
-    content:
       "I may not have gone where I intended to go, but I think I have ended up where I needed to be.",
     author: "Douglas Adams",
   },
@@ -278,11 +258,6 @@ var quotes = [
     content:
       "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.",
     author: "Dr. Seuss",
-  },
-  {
-    content:
-      "Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.",
-    author: "John Green",
   },
   {
     content:
@@ -336,28 +311,13 @@ var quotes = [
   },
   {
     content:
-      "I'm in love with you,\" he said quietly... \"I'm in love with you.\" He was staring at me, and I could see the corners of his eyes crinkling. \"I'm in love with you, and I'm not in the business of denying myself the simple pleasure of saying true things. I'm in love with you, and I know that love is just a shout into the void, and that oblivion is inevitable, and that we're all doomed and that there will come a day when all our labor has been returned to dust, and I know the sun will swallow the only earth we'll ever have, and I am in love with you.",
-    author: "John Green",
-  },
-  {
-    content:
       "Logic will get you from A to Z; imagination will get you everywhere.",
     author: "Albert Einstein",
   },
   {
     content:
-      "I am nothing special, of this I am sure. I am a common man with common thoughts and I've led a common life. There are no monuments dedicated to me and my name will soon be forgotten, but I've loved another with all my heart and soul, and to me, this has always been enough..",
-    author: "Nicholas Sparks",
-  },
-  {
-    content:
       "Whenever I feel the need to exercise, I lie down until it goes away.",
     author: "Paul Terry",
-  },
-  {
-    content:
-      "Have you fallen in love with the wrong person yet? 'Jace said, 'Unfortunately, Lady of the Haven, my one true love remains myself.'...'At least,' she said, 'you don't have to worry about rejection, Jace Wayland.' 'Not necessarily. I turn myself down occasionally, just to keep it interesting.",
-    author: "Cassandra Clare",
   },
   {
     content:
@@ -432,10 +392,10 @@ var quoteAuthor = document.getElementById("author");
 
 var current = -1;
 function getRandomQuote() {
-  var quoteNum = Math.round(Math.random() * 90);
+  var quoteNum = Math.round(Math.random() * 82);
   while (current === quoteNum) {
     // To prevent the same quote from appearing twice in a row
-    quoteNum = Math.round(Math.random() * 90);
+    quoteNum = Math.round(Math.random() * 82);
   }
   current = quoteNum;
   quoteContent.innerHTML = `${quotes[quoteNum].content}`;
