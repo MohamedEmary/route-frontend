@@ -390,14 +390,14 @@ var quotes = [
 var quoteContent = document.getElementById("content");
 var quoteAuthor = document.getElementById("author");
 
-var current = -1;
+var currentIndex = -1;
 function getRandomQuote() {
-  var quoteNum = Math.round(Math.random() * 82);
-  while (current === quoteNum) {
+  var newIndex = Math.round(Math.random() * 82);
+  while (currentIndex === newIndex) {
     // To prevent the same quote from appearing twice in a row
-    quoteNum = Math.round(Math.random() * 82);
+    newIndex = Math.round(Math.random() * 82);
   }
-  current = quoteNum;
-  quoteContent.innerHTML = `${quotes[quoteNum].content}`;
-  quoteAuthor.innerHTML = `- ${quotes[quoteNum].author} -`;
+  currentIndex = newIndex;
+  quoteContent.innerHTML = `${quotes[newIndex].content}`;
+  quoteAuthor.innerHTML = `- ${quotes[newIndex].author} -`;
 }
