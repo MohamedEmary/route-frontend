@@ -18,24 +18,57 @@
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Quote Generator</title>
+    <title>Random Quote Generator</title>
   </head>
   <body>
     <main
       class="bg-black bg-opacity-50 d-flex justify-content-center text-center align-items-center vh-100">
-      <div class="container">
-        <div class="row">
-          <p id="content" class="content text-white fw-bold fs-4"></p>
+      <div class="card bg-black bg-opacity-50 text-white mb-3">
+        <h1 class="card-header fs-4 fst-italic">Your Quote:</h1>
+        <div class="card-body">
+          <p id="content" class="content text-white fw-bold fs-4">
+            Welcome Random Quote Generator
+          </p>
           <h2
             id="author"
             class="author text-white fs-5 fw-bold fst-italic fs-5"></h2>
-          <button
-            onclick="getRandomQuote()"
-            class="quote-button btn bg-primary fs-5 col-1 m-auto text-white">
-            Get a Quote
-          </button>
+          <hr />
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <a
+                href="https://twitter.com"
+                class="text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i
+                  class="fa fa-brands fa-twitter fa-lg me-2"
+                  aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://facebook.com"
+                class="text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i
+                  class="fa fa-brands fa-facebook fa-lg"
+                  aria-hidden="true"></i
+              ></a>
+            </div>
+            <a
+              href="https://goodreads.com/quotes"
+              class="text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa fa-brands fa-goodreads fa-lg"></i
+            ></a>
+          </div>
         </div>
       </div>
+      <button
+        onclick="getRandomQuote()"
+        class="quote-button btn bg-black bg-opacity-75 fs-5 col-1 m-auto text-white">
+        Get a Quote
+      </button>
     </main>
     <script src="assets/js/script.js"></script>
   </body>

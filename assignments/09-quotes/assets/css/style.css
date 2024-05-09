@@ -25,6 +25,10 @@ body {
   transform: translateX(-50%);
 }
 
+i.fa {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 32px;
