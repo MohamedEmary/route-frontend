@@ -28,15 +28,3 @@ body {
 i.fa {
   cursor: pointer;
 }
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  h1 {
-    font-size: 22px;
-  }
-}
