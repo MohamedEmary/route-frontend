@@ -10,23 +10,28 @@
     <meta
       name="description"
       content="A webpage that displays a random quote each time you press on a button" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Quote Generator</title>
   </head>
   <body>
-    <nav class="bg-black py-2">
-      <h1 class="text-center m-0 text-white">Random Quote Generator</h1>
-    </nav>
     <main
-      class="d-flex justify-content-center text-center align-items-center vh-100">
+      class="bg-black bg-opacity-50 d-flex justify-content-center text-center align-items-center vh-100">
       <div class="container">
         <div class="row">
-          <p id="content" class="content fs-4"></p>
-          <h2 id="author" class="author fs-5 fst-italic fs-5"></h2>
+          <p id="content" class="content text-white fw-bold fs-4"></p>
+          <h2
+            id="author"
+            class="author text-white fs-5 fw-bold fst-italic fs-5"></h2>
           <button
             onclick="getRandomQuote()"
-            class="quote-button btn bg-black col-2 m-auto text-white">
+            class="quote-button btn bg-primary fs-5 col-1 m-auto text-white">
             Get a Quote
           </button>
         </div>

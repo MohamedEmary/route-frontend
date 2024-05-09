@@ -398,6 +398,6 @@ function getRandomQuote() {
     newIndex = Math.round(Math.random() * 82);
   }
   currentIndex = newIndex;
-  quoteContent.innerHTML = `${quotes[newIndex].content}`;
+  quoteContent.innerHTML = `<i class="fa-solid fa-quote-left text-white fs-2"></i> ${quotes[newIndex].content}`;
   quoteAuthor.innerHTML = `- ${quotes[newIndex].author} -`;
 }
