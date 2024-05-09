@@ -13,12 +13,22 @@
   font-family: willow, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
 }
 
-.btn {
+.quote-button {
+  position: absolute;
+  bottom: 60px;
   min-width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 24px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 22px;
   }
 }
