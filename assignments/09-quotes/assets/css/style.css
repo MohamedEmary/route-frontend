@@ -4,6 +4,10 @@
   src: url(../fonts/Willow.ttf);
 }
 
+body {
+  background: url(../images/bg.jpg) center/cover no-repeat;
+}
+
 .content {
   font-family: Mina, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -19,6 +23,10 @@
   min-width: fit-content;
   left: 50%;
   transform: translateX(-50%);
+}
+
+i.fa {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
