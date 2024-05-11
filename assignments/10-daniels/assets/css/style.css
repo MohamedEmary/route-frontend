@@ -22,6 +22,13 @@
   transition-duration: 0.5s;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  box-sizing: content-box;
+}
+
 /* ============================== */
 
 nav .nav-item a::before {
@@ -73,13 +80,6 @@ p {
   animation: text 10s infinite;
   font-size: 50px;
   font-weight: 300;
-}
-
-header .fa {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  box-sizing: content-box;
 }
 
 @keyframes text {
@@ -313,4 +313,34 @@ button.contact-btn:hover {
 .services .card-body:hover > i {
   background-color: black !important;
   color: white;
+}
+
+/* ====================================== */
+
+.portfolio .overlay i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: content-box;
+  background: black;
+  color: white;
+}
+
+.portfolio .overlay i:hover {
+  background: white;
+  color: black;
+}
+
+.portfolio .overlay {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  opacity: 0;
+}
+
+.portfolio .card:hover .overlay {
+  opacity: 0.95;
+  transform: translate(-50%, -50%);
 }
