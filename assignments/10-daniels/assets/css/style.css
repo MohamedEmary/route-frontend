@@ -344,3 +344,26 @@ button.contact-btn:hover {
   opacity: 0.95;
   transform: translate(-50%, -50%);
 }
+
+/* ====================================== */
+
+.carousel img {
+  width: 100px;
+}
+
+.carousel-indicators > button {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: var(--bs-gray-400) !important;
+  border-radius: 50%;
+  margin: 0 7px !important;
+}
+
+.carousel-indicators > button.active {
+  background-color: var(--bs-secondary) !important;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+}
