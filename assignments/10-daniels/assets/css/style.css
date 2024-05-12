@@ -402,3 +402,37 @@ button.contact-btn:hover {
 .team .card-body {
   background-color: rgba(0, 0, 0, 0.65);
 }
+
+/* ====================================== */
+
+.contact i {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: content-box;
+  background-color: rgba(var(--bs-secondary-bg-rgb));
+  color: black;
+}
+
+.contact i:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact form input:focus-visible,
+.contact form textarea:focus-visible {
+  border: 0;
+  outline: 0;
+}
+
+.contact form button {
+  background: black;
+  color: white;
+  padding: 10px 40px;
+  font-size: 13px;
+}
+
+.contact form button:hover {
+  background: white;
+  color: black;
+}
