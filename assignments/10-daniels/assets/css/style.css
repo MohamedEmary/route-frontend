@@ -317,16 +317,19 @@ button.contact-btn:hover {
 
 /* ====================================== */
 
-.portfolio .overlay i {
+.portfolio .overlay i,
+.team .overlay i {
   width: 30px;
   height: 30px;
   line-height: 30px;
   box-sizing: content-box;
   background: black;
   color: white;
+  cursor: pointer;
 }
 
-.portfolio .overlay i:hover {
+.portfolio .overlay i:hover,
+.team .overlay i:hover {
   background: white;
   color: black;
 }
@@ -366,4 +369,36 @@ button.contact-btn:hover {
 .carousel-indicators {
   position: absolute;
   bottom: 30px;
+}
+
+/* ====================================== */
+
+.team .img-div:hover img {
+  scale: 1.2;
+}
+
+.team .overlay i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.team .overlay {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  width: calc(100% - 200px);
+  height: calc(100% - 200px);
+  opacity: 0;
+}
+
+.team .card:hover .overlay {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  opacity: 0.95;
+  transform: translate(-50%, -50%) rotateY(0deg);
+}
+
+.team .card-body {
+  background-color: rgba(0, 0, 0, 0.65);
 }
