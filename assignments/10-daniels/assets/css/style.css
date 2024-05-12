@@ -33,6 +33,22 @@ p {
   box-sizing: content-box;
 }
 
+.dotted-bg {
+  background: url(../images/dots.png);
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  z-index: -1;
+}
+
+section h2 {
+  width: fit-content;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
 /* ============================== */
 
 nav .nav-item a::before {
@@ -49,9 +65,10 @@ body:not(:has(:target)) li a[href="#home"]::before,
 body:has(#home:target) li a[href="#home"]::before,
 body:has(#services:target) li a[href="#services"]::before,
 body:has(#portfolio:target) li a[href="#portfolio"]::before,
+body:has(#team:target) li a[href="#team"]::before,
+body:has(#testimonials:target) li a[href="#testimonials"]::before,
 body:has(#about:target) li a[href="#about"]::before,
-body:has(#contact:target) li a[href="#contact"]::before,
-body:has(#blog:target) li a[href="#blog"]::before {
+body:has(#contact:target) li a[href="#contact"]::before {
   width: 50%;
   background-color: black;
 }
