@@ -49,7 +49,7 @@ section h2 {
   position: relative;
 }
 
-/* ============================== */
+/* =============== NAVBAR =============== */
 
 nav .nav-item a::before {
   content: "";
@@ -73,7 +73,7 @@ body:has(#contact:target) li a[href="#contact"]::before {
   background-color: black;
 }
 
-/* ============================ */
+/* =============== HEADER =============== */
 
 header {
   background: url(../images/bg.jpg) left/cover fixed;
@@ -84,7 +84,7 @@ header h1 {
   font-weight: bold;
 }
 
-/* ============================ */
+/* =============== ABOUT =============== */
 
 .progress {
   height: 25px !important;
@@ -108,10 +108,26 @@ button.cv-btn:hover {
 
 button.contact-btn:hover {
   background-color: black !important;
+}
+
+.about a[href="#contact"] {
+  color: black;
+}
+
+.about a[href="#contact"]:hover {
+  background-color: black !important;
   color: white;
 }
 
-/* ====================================== */
+.about .dotted-bg {
+  width: 70%;
+  height: 70%;
+  left: -20px;
+  top: calc(70% - 200px);
+  z-index: 0;
+}
+
+/* =============== SERVICES =============== */
 
 .services .card-body > i {
   width: 80px;
@@ -125,7 +141,7 @@ button.contact-btn:hover {
   color: white;
 }
 
-/* ====================================== */
+/* =============== PORTFOLIO =============== */
 
 .portfolio .overlay i,
 .team .overlay i {
@@ -158,7 +174,7 @@ button.contact-btn:hover {
   transform: translate(-50%, -50%);
 }
 
-/* ====================================== */
+/* =============== CAROUSEL =============== */
 
 .carousel img {
   width: 100px;
@@ -181,7 +197,7 @@ button.contact-btn:hover {
   bottom: 30px;
 }
 
-/* ====================================== */
+/* =============== TEAM =============== */
 
 .team .img-div:hover img {
   scale: 1.2;
@@ -213,7 +229,7 @@ button.contact-btn:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
 
-/* ====================================== */
+/* =============== CONTACT =============== */
 
 .contact i {
   width: 60px;

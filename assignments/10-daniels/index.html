@@ -155,15 +155,16 @@
 
     <!-- ============== ABOUT ============== -->
     <section id="about" class="about overflow-auto">
-      <div class="my-5 container  p-md-5 bg-white about-card">
+      <div class="my-5 container p-md-5 bg-white about-card">
         <div class="row">
           <div class="skills d-flex flex-column p-3 col-lg-5">
             <div class="upper-left d-flex align-items-center">
-              <div class="p-2">
+              <div class="p-2 position-relative">
                 <img
-                  class="d-block w-100 rounded-2"
+                  class="d-block w-100 rounded-2 position-relative z-1"
                   src="./assets/images/hero.jpg"
                   alt="portrait image" />
+                <div class="dotted-bg position-absolute"></div>
               </div>
             </div>
           </div>
@@ -234,8 +235,9 @@
 
             <button
               class="cv-btn mt-2 btn bg-black text-white border-1 border-black py-2 me-1 poppins t-duration">
-              Download C.V</button
-            ><a href="#contact">
+              Download C.V
+            </button>
+            <a href="#contact">
               <button
                 class="contact-btn mt-2 btn bg-white border border-1 border-black py-2 poppins t-duration">
                 Contact Me
