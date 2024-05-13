@@ -76,7 +76,7 @@ body:has(#contact:target) li a[href="#contact"]::before {
 /* ============================ */
 
 header {
-  background: url(../images/bg.jpg) center/cover fixed;
+  background: url(../images/bg.jpg) left/cover fixed;
 }
 
 header h1 {
@@ -147,7 +147,7 @@ button.contact-btn:hover {
 .portfolio .overlay {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -48%);
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   opacity: 0;
