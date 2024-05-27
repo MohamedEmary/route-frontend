@@ -250,4 +250,51 @@ When working making your website always finish the design first (the HTML and CS
 
 Also when solving a problem using JS divide it into smaller tasks, and solve each task separately.
 
-See the CRUD system example videos from video 4 to 9.
+\begin{box4}{Important:}
+Watch the CRUD example system videos from video 4 to 9.
+\end{box4}
+
+When getting an element from the DOM using `document.getElementById("id")`, you can use `console.log(element)` it to make sure you got the right element.
+
+When JS deals with HTML it converts the HTML tags to objects each with its own properties and methods and each attribute in the HTML tag is a property in the object, and you can manipulate these objects using JS.
+
+```{.js .numberLines}
+var addBtn = document.getElementById("addBtn");
+
+addBtn.onclick = addProduct; // IMPORTANT: Don't add () after the function name
+
+function addProduct() {
+  var prodName = document.getElementById("prodName").value;
+  console.log(prodName);
+};
+```
+
+In this code we assigned the `addProduct` function to the `onclick` event of the `addBtn` button, and we didn't add `()` after the function name, because we don't want to call the function immediately, we want to call it when the button is clicked.
+
+The `addProduct` function gets the value of the input with the id `prodName` and logs it to the console.
+
+\begin{box4}{Important Note:}
+You shouldn't put this line before the function:
+
+\texttt{var prodName = document.getElementById("prodName").value;}
+
+Because the input field will not have a value when the page loads, and you want to get the value when the button is clicked, as the user will press it after typing the product name.
+\end{box4}
+
+\pagebreak
+
+# Summary
+
+In this session we learned about the following array methods:
+
+- `push` adds an element to the end of an array, and returns the new length of the array.
+- `unshift` adds an element to the beginning of an array, and returns the new length of the array.
+- `pop` removes the last element from an array, and returns that element.
+- `shift` removes the first element from an array, and returns that element.
+- `splice` can add or remove elements from an array, and returns the removed elements.
+- `slice` returns a new array with the elements between the start and end indexes.
+- `includes` checks if an array includes a certain element, and returns `true` or `false`.
+- `indexOf` returns the first index at which a given element can be found in the array, or `-1` if it is not present.
+- `lastIndexOf` returns the index of the last occurrence of an element in an array.
+
+We also learned about CRUD operations, and how to manipulate the DOM using JavaScript.
