@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+original_dir=$(pwd)
+
+# Loop over each directory
+for dir in session-* practice-*; do
+  cd $dir
+  make-pdf ${dir}.md
+  cd $original_dir
+done
