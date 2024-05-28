@@ -303,7 +303,7 @@ It allows you to use icons like these:
 
 \begin{center}
 
-\faEnvelopeO\ \faInbox\ \faHeart\ \faMap\ \faMapMarker\ \faPhone\ \faPhoto\ \faSave\ \faApple\ \faAmazon\ \faAndroid\ \faWindows\ \faLinux\ \faTwitter\ \faFacebookOfficial\ \faInstagram\ \faGithub\ \faGitlab\ \faStackOverflow\ \faYoutube\ \faReddit\ \faWhatsapp\ \faPinterest\
+\faEnvelope\ \faInbox\ \faHeart\ \faMap\ \faMapMarker*\ \faPhone\ \faPhotoVideo\ \faSave\ \faApple\ \faAmazon\ \faAndroid\ \faWindows\ \faLinux\ \faTwitter\ \faFacebook\ \faInstagram\ \faGithub\ \faGitlab\ \faStackOverflow\ \faYoutube\ \faReddit\ \faWhatsapp\ \faPinterest\
 
 \end{center}
 
