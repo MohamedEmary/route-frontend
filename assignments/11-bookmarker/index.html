@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="bookmarks, favourites, websites, Bookmarker" />
+    <meta name="author" content="Mohamed Emary" />
+    <meta
+      name="description"
+      content="Bookmarker is a website to add bookmarks for your favourite websites" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" href="assets/images/image.png" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="text-center ft-main">
+    <div class="container">
+      <header>
+        <h1 class="ft-main-header my-5 m-auto">Bookmarker</h1>
+      </header>
+      <main>
+        <form class="form my-4">
+          <caption>
+            <h2 class="ft-sec-header my-4 fs-4">
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+          </caption>
+          <div class="mb-3 text-start">
+            <label for="siteName" class="form-label"
+              ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder="Facebook" />
+          </div>
+          <div class="mb-3 text-start">
+            <label for="siteUrl" class="form-label"
+              ><i class="fa-solid fa-link"></i> Site URL</label
+            >
+            <!-- type="url" -->
+            <input
+              type="text"
+              class="form-control"
+              id="siteUrl"
+              placeholder="https://www.facebook.com" />
+            <button class="btn btn-danger d-block m-auto mt-4 py-2 px-4">
+              Add Bookmark
+            </button>
+          </div>
+        </form>
+        <table class="table">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </thead>
+        </table>
+      </main>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+/* =======================General Options======================= */
+:root {
+  --duration: 0.3s;
+}
+* {
+  margin: 0;
+}
+body {
+  background-color: #f7ecde;
+}
+.ft-sec-header {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ft-main-header {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.ft-main {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* =======================Header======================= */
+
+h1 {
+  font-size: 50px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::before {
+  content: "";
+  background-color: rgb(var(--bs-warning-rgb));
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  z-index: -1;
+  transition-duration: var(--duration);
+}
+
+h1:hover::before {
+  height: 70%;
+}
+
+/* =======================Input Form======================= */
+
+h2 {
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+
+form {
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+}
+
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem rgba(253, 213, 13, 0.412);
+}
