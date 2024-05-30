@@ -1,7 +1,7 @@
 var addBtn = document.getElementById("addBtn");
 
 var bookmarks = [];
-var index = 1;
+var index = 0;
 
 // validateURL using Regex
 function validateURL(str) {
@@ -29,16 +29,15 @@ function addBookmark() {
     siteUrl.value !== "" &&
     validateURL(siteUrl.value)
   ) {
-    index += 1;
     var bookmark = {
       index: index,
       name: siteName.value,
-      url: siteName.value,
+      url: siteUrl.value,
     };
     bookmarks.push(bookmark);
     tableBody.innerHTML += `
     <tr id="bookmark${index}">
-      <td>${bookmark.index}</td>
+      <td class="indexTd">${bookmarks.length}</td>
       <td>${bookmark.name}</td>
       <td>
         <a
@@ -56,6 +55,7 @@ function addBookmark() {
         </button>
       </td>
     </tr>`;
+    index += 1;
     siteName.value = "";
     siteUrl.value = "";
   }
@@ -63,8 +63,13 @@ function addBookmark() {
 
 function deleteBookmark(index) {
   var bookmarkTableRow = document.getElementById(`bookmark${index}`);
-  console.log(bookmarkTableRow);
   bookmarkTableRow.remove();
+  bookmarks.splice(index, 1);
+  var indexTdArr = document.getElementsByClassName("indexTd");
+  for (let i = 0; i < indexTdArr.length; i++) {
+    indexTdArr[i].innerText = i + 1;
+  }
+  index -= 1;
 }
 
 addBtn.onclick = addBookmark;
