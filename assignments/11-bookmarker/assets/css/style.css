@@ -70,6 +70,18 @@ form {
   width: fit-content;
 }
 
+/* =======================Sites Table======================= */
+
+.table {
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+
 /* =======================Mobile Devices======================= */
 
 @media screen and (max-width: 768px) {
