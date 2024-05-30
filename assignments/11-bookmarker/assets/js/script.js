@@ -35,13 +35,13 @@ function addBookmark() {
     if (!!!beginWithHttp.test(siteUrl.value)) {
       siteUrl.value = "https://" + siteUrl.value;
     }
-
     var bookmark = {
       index: index,
       name: siteName.value,
       url: siteUrl.value,
     };
     bookmarks.push(bookmark);
+    // Recreate the table rows with updated indices
     tableBody.innerHTML += `
     <tr id="bookmark${index}">
       <td class="indexTd">${bookmarks.length}</td>
