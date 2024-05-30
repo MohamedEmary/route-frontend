@@ -1,7 +1,10 @@
 var addBtn = document.getElementById("addBtn");
+var tableBody = document.getElementById("tbody");
 
 var bookmarks = [];
-var index = 0;
+updateIndices();
+
+var index = bookmarks.length + 1;
 
 // validateURL using Regex
 function validateURL(str) {
@@ -20,10 +23,9 @@ function validateURL(str) {
 
 // Add bookmark
 function addBookmark() {
+  index = bookmarks.length + 1;
   var siteName = document.getElementById("siteName");
   var siteUrl = document.getElementById("siteUrl");
-  var tableBody = document.getElementById("tbody");
-
   if (
     siteName.value !== "" &&
     siteUrl.value !== "" &&
@@ -61,14 +63,40 @@ function addBookmark() {
   }
 }
 
+function updateIndices() {
+  tableBody.innerHTML = ``;
+  for (let i = 0; i < bookmarks.length; i++) {
+    bookmarks[i].index = i + 1;
+    tableBody.innerHTML += `
+    <tr id="bookmark${i + 1}">
+      <td class="indexTd">${bookmarks[i].index}</td>
+      <td>${bookmarks[i].name}</td>
+      <td>
+        <a
+          href="${bookmarks[i].url}"
+          target="_blank"
+          rel="noopener noreferrer">
+          <button id="visitBtn" class="btn btn-success">
+            <i class="fa-regular fa-eye"></i> Visit
+          </button>
+        </a>
+      </td>
+      <td>
+        <button id="deleteBtn" onclick="deleteBookmark(${
+          bookmarks[i].index
+        })" class="btn btn-danger">
+          <i class="fa-regular fa-trash-can"></i> Delete
+        </button>
+      </td>
+    </tr>`;
+  }
+}
+
 function deleteBookmark(index) {
   var bookmarkTableRow = document.getElementById(`bookmark${index}`);
   bookmarkTableRow.remove();
-  bookmarks.splice(index, 1);
-  var indexTdArr = document.getElementsByClassName("indexTd");
-  for (let i = 0; i < indexTdArr.length; i++) {
-    indexTdArr[i].innerText = i + 1;
-  }
+  bookmarks.splice(index - 1, 1);
+  updateIndices();
   index -= 1;
 }
 
