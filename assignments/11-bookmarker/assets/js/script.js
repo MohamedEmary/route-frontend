@@ -1,3 +1,5 @@
+var addBtn = document.getElementById("addBtn");
+
 var bookmarks = [];
 var index = 1;
 
@@ -16,12 +18,10 @@ function validateURL(str) {
   return !!pattern.test(str);
 }
 
+// Add bookmark
 function addBookmark() {
   var siteName = document.getElementById("siteName");
   var siteUrl = document.getElementById("siteUrl");
-  var addBtn = document.getElementById("addBtn");
-  var visitBtn = document.getElementById("visitBtn");
-  var deleteBtn = document.getElementById("deleteBtn");
   var tableBody = document.getElementById("tbody");
 
   if (
@@ -37,7 +37,7 @@ function addBookmark() {
     };
     bookmarks.push(bookmark);
     tableBody.innerHTML += `
-    <tr>
+    <tr id="bookmark${index}">
       <td>${bookmark.index}</td>
       <td>${bookmark.name}</td>
       <td>
@@ -51,15 +51,20 @@ function addBookmark() {
         </a>
       </td>
       <td>
-        <button id="deleteBtn" class="btn btn-danger">
+        <button id="deleteBtn" onclick="deleteBookmark(${bookmark.index})" class="btn btn-danger">
           <i class="fa-regular fa-trash-can"></i> Delete
         </button>
       </td>
-    </tr>
-  `;
+    </tr>`;
     siteName.value = "";
     siteUrl.value = "";
   }
+}
+
+function deleteBookmark(index) {
+  var bookmarkTableRow = document.getElementById(`bookmark${index}`);
+  console.log(bookmarkTableRow);
+  bookmarkTableRow.remove();
 }
 
 addBtn.onclick = addBookmark;
