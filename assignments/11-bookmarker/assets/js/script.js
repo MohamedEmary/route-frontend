@@ -31,6 +31,11 @@ function addBookmark() {
     siteUrl.value !== "" &&
     validateURL(siteUrl.value)
   ) {
+    var beginWithHttp = new RegExp("^(https?:\\/\\/)", "i");
+    if (!!!beginWithHttp.test(siteUrl.value)) {
+      siteUrl.value = "https://" + siteUrl.value;
+    }
+
     var bookmark = {
       index: index,
       name: siteName.value,
