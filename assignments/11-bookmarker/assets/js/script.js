@@ -1,12 +1,20 @@
 var addBtn = document.getElementById("addBtn");
 var tableBody = document.getElementById("tbody");
+var siteName = document.getElementById("siteName");
+var siteUrl = document.getElementById("siteUrl");
 
 var bookmarks = [];
 updateIndices();
 
 var index = bookmarks.length + 1;
 
-// validateURL using Regex
+// Validate site name using Regex
+function validateName(str) {
+  var pattern = new RegExp("^[a-zA-Z]{2,}[a-zA-Z\\d\\s]*[a-zA-Z\\d]$", "i");
+  return !!pattern.test(str);
+}
+
+// Validate URL using Regex
 function validateURL(str) {
   var pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
@@ -21,7 +29,6 @@ function validateURL(str) {
   return !!pattern.test(str);
 }
 
-// Add bookmark
 function addBookmark() {
   index = bookmarks.length + 1;
   var siteName = document.getElementById("siteName");
@@ -105,4 +112,35 @@ function deleteBookmark(index) {
   index -= 1;
 }
 
+function styleInputField(type) {
+  if (type === "url") {
+    var siteUrl = document.getElementById("siteUrl");
+    if (validateURL(siteUrl.value)) {
+      siteUrl.style.boxShadow = "0 0 0 0.25rem rgba(77, 253, 13, 0.412)";
+      siteUrl.style.borderColor = "#46d939";
+    } else {
+      siteUrl.style.boxShadow = "0 0 0 0.25rem rgba(253, 65, 13, 0.412)";
+      siteUrl.style.borderColor = "#d95639";
+    }
+  } else if (type === "name") {
+    var siteName = document.getElementById("siteName");
+    if (validateName(siteName.value)) {
+      siteName.style.boxShadow = "0 0 0 0.25rem rgba(77, 253, 13, 0.412)";
+      siteName.style.borderColor = "#46d939";
+    } else {
+      siteName.style.boxShadow = "0 0 0 0.25rem rgba(253, 65, 13, 0.412)";
+      siteName.style.borderColor = "#d95639";
+    }
+  } else {
+    return;
+  }
+}
+
 addBtn.onclick = addBookmark;
+siteName.onkeyup = function () {
+  styleInputField("name");
+};
+
+siteUrl.onkeyup = function () {
+  styleInputField("url");
+};
