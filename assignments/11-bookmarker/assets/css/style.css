@@ -50,6 +50,7 @@ h1:hover::before {
 /* =======================Input Form======================= */
 
 h2 {
+  font-size: 25px;
   background-image: linear-gradient(to right, #3ca55c, #b5ac49);
   background-clip: text;
   color: transparent;
@@ -67,4 +68,15 @@ form {
 
 .addbookmark {
   width: fit-content;
+}
+
+/* =======================Mobile Devices======================= */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
 }
