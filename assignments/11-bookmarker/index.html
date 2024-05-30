@@ -59,9 +59,12 @@
               class="form-control"
               id="siteUrl"
               placeholder="https://www.facebook.com" />
-            <button class="btn btn-danger d-block m-auto mt-4 py-2 px-4">
+            <!-- Type of button -->
+            <div
+              id="addBtn"
+              class="addbookmark btn btn-danger d-block m-auto mt-4 py-2 px-4">
               Add Bookmark
-            </button>
+            </div>
           </div>
         </form>
 
@@ -73,7 +76,7 @@
             <th>Visit</th>
             <th>Delete</th>
           </thead>
-          <tbody class="fw-normal">
+          <tbody id="tbody" class="fw-normal">
             <tr>
               <td>1</td>
               <td>Facebook</td>
@@ -82,13 +85,13 @@
                   href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer">
-                  <button class="btn btn-success">
+                  <button id="visitBtn" class="btn btn-success">
                     <i class="fa-regular fa-eye"></i> Visit
                   </button>
                 </a>
               </td>
               <td>
-                <button class="btn btn-danger">
+                <button id="deleteBtn" class="btn btn-danger">
                   <i class="fa-regular fa-trash-can"></i> Delete
                 </button>
               </td>
