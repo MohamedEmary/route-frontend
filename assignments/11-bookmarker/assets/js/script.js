@@ -115,7 +115,7 @@ function deleteBookmark(index) {
 function styleInputField(type) {
   var inputField = document.getElementById("site" + type);
   var isValid =
-    type === "url"
+    type === "Url"
       ? validateURL(inputField.value)
       : validateName(inputField.value);
   styleElementBasedOnValidation(inputField, isValid);
