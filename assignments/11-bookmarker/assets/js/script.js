@@ -113,34 +113,29 @@ function deleteBookmark(index) {
 }
 
 function styleInputField(type) {
-  if (type === "url") {
-    var siteUrl = document.getElementById("siteUrl");
-    if (validateURL(siteUrl.value)) {
-      siteUrl.style.boxShadow = "0 0 0 0.25rem rgba(77, 253, 13, 0.412)";
-      siteUrl.style.borderColor = "#46d939";
-    } else {
-      siteUrl.style.boxShadow = "0 0 0 0.25rem rgba(253, 65, 13, 0.412)";
-      siteUrl.style.borderColor = "#d95639";
-    }
-  } else if (type === "name") {
-    var siteName = document.getElementById("siteName");
-    if (validateName(siteName.value)) {
-      siteName.style.boxShadow = "0 0 0 0.25rem rgba(77, 253, 13, 0.412)";
-      siteName.style.borderColor = "#46d939";
-    } else {
-      siteName.style.boxShadow = "0 0 0 0.25rem rgba(253, 65, 13, 0.412)";
-      siteName.style.borderColor = "#d95639";
-    }
+  var inputField = document.getElementById("site" + type);
+  var isValid =
+    type === "url"
+      ? validateURL(inputField.value)
+      : validateName(inputField.value);
+  styleElementBasedOnValidation(inputField, isValid);
+}
+
+function styleElementBasedOnValidation(element, isValid) {
+  if (isValid) {
+    element.classList.remove("is-invalid");
+    element.classList.add("is-valid");
   } else {
-    return;
+    element.classList.remove("is-valid");
+    element.classList.add("is-invalid");
   }
 }
 
 addBtn.onclick = addBookmark;
 siteName.onkeyup = function () {
-  styleInputField("name");
+  styleInputField("Name");
 };
 
 siteUrl.onkeyup = function () {
-  styleInputField("url");
+  styleInputField("Url");
 };
