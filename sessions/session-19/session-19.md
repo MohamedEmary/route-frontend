@@ -223,3 +223,7 @@ upload.onclick = function() {
   }
 };
 ```
+
+This is how the page will look like:
+
+![Image Upload](image/img-upload.png){width=70%}
