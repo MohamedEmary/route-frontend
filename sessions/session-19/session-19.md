@@ -367,7 +367,7 @@ console.log(str.toLowerCase()); // i
 console.log(str.toLocaleLowerCase('tr-TR')); // ı
 ```
 
-The output of both `toUpperCase()` and `toLocaleUpperCase()` is wrong for the Turkish language, while the output of both `toLowerCase()` and `toLocaleLowerCase()` is correct.
+The output of both `toUpperCase()` and `toLowerCase()` is wrong for the Turkish language, while the output of both `toLocaleLowerCase()` and `toLocaleUpperCase()` is correct.
 
 ## `includes()`
 
@@ -553,3 +553,179 @@ console.log(str.padEnd(10));   // '99     '
 console.log(str.padStart(10, '0')); // '0000000099'
 console.log(str.padEnd(10, '0'));   // '9900000000'
 ```
+
+# Searching in CRUD System
+
+There is two types of search:
+
+1. Real-time search: The search is done while the user is typing, it provides a better user experience but also comes with a performance cost.
+2. Search button: The search is done when the user clicks on the search button.
+
+## Real-time Search
+
+You can handle this by using the `keyup` event which is triggered when the user releases a key, you can also use the `input` event which is better and triggered when the value of the input element changes this is better because not all keys change the value of the input element like the arrow keys or the control keys.
+
+HTML:
+
+```{.html .numberLines}
+<input type="text" id="search" />
+```
+
+JavaScript:
+
+```{.js .numberLines}
+var search = document.getElementById('search');
+search.oninput = function() {
+  console.log(search.value);
+};
+```
+
+This will log the value of the input element whenever the user changes it.
+
+## Search Button
+
+You can handle this by using the `onclick` event which is triggered when the user clicks on the search button.
+
+HTML:
+
+```{.html .numberLines}
+<input type="text" id="search" />
+<button id="searchBtn">Search</button>
+```
+
+JavaScript:
+
+```{.js .numberLines}
+var search = document.getElementById('search');
+var searchBtn = document.getElementById('searchBtn');
+searchBtn.onclick = function() {
+  console.log(search.value);
+};
+```
+
+This will log the value of the input element whenever the user clicks on the search button.
+
+## Example of Real-time Search CRUD System
+
+This is an example of a real-time search in a CRUD system where the user inputs some product names and can search for them in real-time.
+
+For simplicity, the JS code is written in the `<script>` tag of the HTML file:
+
+```{.html .numberLines}
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Product Management</h2>
+
+    <input type="text" id="productName" placeholder="Enter product name" />
+    <button onclick="addProduct()">Add Product</button>
+
+    <h2>Product List</h2>
+    <ul id="productList"></ul>
+
+    <h2>Search Product</h2>
+    <input
+      type="text"
+      id="searchProduct"
+      placeholder="Search product"
+      oninput="searchProduct()" />
+
+    <script>
+      var products = [];
+
+      function addProduct() {
+        var productName = document.getElementById("productName");
+        if (productName.value) { // check if the input is not empty
+          products.push(productName.value);
+          productName.value = "";
+          displayProducts();
+        }
+      }
+
+      function displayProducts() {
+        var productList = document.getElementById("productList");
+        productList.innerHTML = "";
+        for (var i = 0; i < products.length; i++) {
+          productList.innerHTML += `<li> ${products[i]} </li>`;
+        }
+      }
+
+      function searchProduct() {
+        var searchValue = document.getElementById("searchProduct").value.toLowerCase();
+        var productList = document.getElementById("productList");
+        productList.innerHTML = "";
+        for (var i = 0; i < products.length; i++) {
+          // toLowerCase() is used to make the search case-insensitive
+          if (products[i].toLowerCase().includes(searchValue)) {
+            productList.innerHTML += `<li> ${products[i]} </li>`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+```
+
+This is how the page will look:
+
+::: {.columns .ragged columngap=2.5em column-rule="0.0pt solid black"}
+
+![After Adding All Products](image/prod-list.png){width=25%}
+
+\columnbreak
+
+![While Searching...](image/searching.png){width=25%}
+
+:::
+
+\pagebreak
+
+# Summary
+
+**Local Storage**
+
+- Local storage is a way to store data in the browser with a maximum storage of 5MB.
+- It's limited to the browser and not shared with other users or the server.
+- You can only store strings in local storage.
+- Data is not removed when you close the browser tab, but it's removed when you clear the local storage or browser data.
+
+**Session Storage**
+
+- Session storage is similar to local storage but data is removed when the session is ended (e.g. closing the tab or browser).
+- The same methods and properties are used to work with session storage as local storage.
+
+**Storing Objects**
+
+- To store objects in local storage, you need to convert them to strings using `JSON.stringify()` and convert them back from JSON using `JSON.parse()` when retrieving them.
+
+**Accepting Image As Input**
+
+- With an input element of type `file`, you can specify what file types the user can select using the `accept` attribute.
+- You can also specify if the user can select multiple files using the `multiple` attribute.
+- To get the file name, you can use the `files` property of the input element.
+- To display the image, you can get the file object from the input element and use the `createObjectURL()` method to create a URL for the file object.
+
+**String Methods**
+
+- This section covers common string methods including:
+  - `charAt()` - returns the character at a specified index.
+  - `slice()` - extracts a part of a string and returns a new string.
+  - `substring()` - similar to slice but doesn't support negative indexes.
+  - `toUpperCase()` - converts a string to uppercase letters.
+  - `toLowerCase()` - converts a string to lowercase letters.
+  - `includes()` - checks if a string contains a specified value.
+  - `concat()` - concatenates two or more strings.
+  - `trim()` - removes whitespace from both ends of a string.
+  - `split()` - splits a string into an array of substrings.
+  - `join()` - joins an array of strings into a single string.
+  - `repeat()` - returns a new string with a specified number of copies of an existing string.
+  - `replace()` - searches a string for a specified value and replaces it with another value.
+  - `padStart()` - pads a string with another string to a specified length from the left side.
+  - `padEnd()` - pads a string with another string to a specified length from the right side.
+
+**Searching in CRUD System**
+
+- There are two types of search: real-time search and search with a button.
+- Real-time search is done while the user is typing using the `input` event.
+- Search with a button is done when the user clicks on a search button using the `onclick` event.
+- The provided code shows an example of a real-time search for products in a CRUD system.
