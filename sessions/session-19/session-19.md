@@ -141,3 +141,85 @@ localStorage.setItem('people', JSON.stringify(people));
 var people = JSON.parse(localStorage.getItem('people'));
 console.log(people[1]); // { name: 'Ahmed', age: 30 }
 ```
+
+# Accepting Image As Input
+
+With the input element where the user can select an image, you will specify the type as `file` you can also specify the `accept` attribute to specify the type of files that the user can select, for example, `image/png`, `image/jpeg`, or `image/*` to accept all image types, and you can also use the attribute `multiple` to allow the user to select multiple files.
+
+```{.html .numberLines}
+<input type="file" accept="image/*" id="imgInput" />
+<button id="upload">Upload</button>
+```
+
+This will create an input field that accepts all image types.
+
+In your JavaScript code when you `console.log` the input element value, you will get a `C:\fakepath\` followed by the image file name, so for example if your image file name is `my_image.jpg` the console output will be `C:\fakepath\my_image.jpg`
+
+```{.js .numberLines}
+var imgInput = document.getElementById('imgInput');
+var upload = document.getElementById('upload');
+upload.onclick = function() {
+  console.log(imgInput.value); // C:\fakepath\my_image.jpg
+};
+```
+
+This `C:\fakepath\` is a browser standard that doesn't depend on the operating system and it's used by the browser with any file the user uploads not just images. This is done for security reasons to prevent the website from knowing the user's file system structure.
+
+If the real path was `C:\Users\Mohamed\TopSuperSecretProject\VeryImportantImg.png`, then by uploading it you'd be exposing that your real name is Mohamed and you're working on TopSuperSecretProject which is a security risk.
+
+Since `C:\fakepath\` is a browser standard, you can see it in any operating system even those with no `C:\` partition like macOS or Linux.
+
+So how can you display the image?
+
+<!-- You can get the file object from the input element and then get the file name from the file object. -->
+
+<!-- ```{.js .numberLines}
+var imgInput = document.getElementById('imgInput');
+var upload = document.getElementById('upload');
+upload.onclick = function() {
+  var file = imgInput.files[0];
+  console.log(file.name);
+};
+``` -->
+
+You can get the file object from the input element using the `files` property. The `imgInput.files` is a FileList object that contains the files the user selected in case the input element has the `multiple` attribute. If the input element doesn't have the `multiple` attribute, then you can access the file using `imgInput.files[0]`.
+
+You can access the file name using `name` property.
+
+<!-- When working with our project we can suppose that the path of the image is the same as the path of the images folder in the project so if our image folder is `./assets/images/` and the image user selected is `my_image.jpg` then the path of the image will be `./assets/images/my_image.jpg`. 
+
+```{.js .numberLines}
+var imgInput = document.getElementById('imgInput');
+var upload = document.getElementById('upload');
+upload.onclick = function() {
+  var file = imgInput.files[0];
+  var path = `./assets/images/${file.name}`;
+  console.log(path);
+};
+```-->
+
+We get the file object from the input element, then we use the `createObjectURL()` method to create a URL for the file object, then we can use that URL to display the image in the browser using the `src` attribute of an image element.
+
+In HTML:
+
+```{.html .numberLines}
+<input type="file" accept="image/*" id="imgInput" />
+<button id="upload">Upload</button>
+<img id="img" />
+```
+
+In JavaScript:
+
+```{.js .numberLines}
+var imgInput = document.getElementById('imgInput');
+var upload = document.getElementById('upload');
+var img = document.getElementById('img');
+upload.onclick = function() {
+  var file = imgInput.files[0];
+  if (file) {
+    var objectURL = URL.createObjectURL(file);
+    // set the src attribute of the image element to the object URL
+    img.src = objectURL;
+  }
+};
+```
