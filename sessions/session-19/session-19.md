@@ -153,19 +153,16 @@ With the input element where the user can select an image, you will specify the 
 
 This will create an input field that accepts all image types.
 
-In your JavaScript code when you `console.log` the input element value, you will get a `C:\fakepath\` followed by the image file name, so for example if your image file name is `my_image.jpg` the console output will be `C:\fakepath\my_image.jpg`
+In your JavaScript code when you `console.log` the value of the file input element, you will get a `C:\fakepath\` followed by the image file name, so for example if your image file name is `my_image.jpg` the console output will be `C:\fakepath\my_image.jpg`
 
 ```{.js .numberLines}
 var imgInput = document.getElementById('imgInput');
-var upload = document.getElementById('upload');
-upload.onclick = function() {
-  console.log(imgInput.value); // C:\fakepath\my_image.jpg
-};
+console.log(imgInput.value); // C:\fakepath\my_image.jpg
 ```
 
 This `C:\fakepath\` is a browser standard that doesn't depend on the operating system and it's used by the browser with any file the user uploads not just images. This is done for security reasons to prevent the website from knowing the user's file system structure.
 
-If the real path was `C:\Users\Mohamed\TopSuperSecretProject\VeryImportantImg.png`, then by uploading it you'd be exposing that your real name is Mohamed and you're working on TopSuperSecretProject which is a security risk.
+For example if the real file path was `C:\Users\Ahmed\TopSuperSecretProject\Very ImportantImg.png`, then by uploading it you'd be exposing that your real name is Ahmed and you're working on TopSuperSecretProject which is a security risk.
 
 Since `C:\fakepath\` is a browser standard, you can see it in any operating system even those with no `C:\` partition like macOS or Linux.
 
@@ -182,9 +179,14 @@ upload.onclick = function() {
 };
 ``` -->
 
-You can get the file object from the input element using the `files` property. The `imgInput.files` is a FileList object that contains the files the user selected in case the input element has the `multiple` attribute. If the input element doesn't have the `multiple` attribute, then you can access the file using `imgInput.files[0]`.
+You can get the file object from the input element using the `files` property. The `imgInput.files` is a FileList object that contains the multiple files the user selected in case the input element has the `multiple` attribute. If the input element doesn't have the `multiple` attribute, then you can access the one file using `imgInput.files[0]`.
 
 You can access the file name using `name` property.
+
+```{.js .numberLines}
+var imgInput = document.getElementById('imgInput');
+console.log(imgInput.files[0].name); // my_image.jpg
+```
 
 <!-- When working with our project we can suppose that the path of the image is the same as the path of the images folder in the project so if our image folder is `./assets/images/` and the image user selected is `my_image.jpg` then the path of the image will be `./assets/images/my_image.jpg`. 
 
@@ -198,7 +200,9 @@ upload.onclick = function() {
 };
 ```-->
 
-We get the file object from the input element, then we use the `createObjectURL()` method to create a URL for the file object, then we can use that URL to display the image in the browser using the `src` attribute of an image element.
+To display the image we get the file object from the input element, then we use the `createObjectURL()` method to create a URL for the file object, then we can use that URL to display the image in the browser using the `src` attribute of an image element.
+
+Consider this example:
 
 In HTML:
 
@@ -227,3 +231,325 @@ upload.onclick = function() {
 This is how the page will look like:
 
 ![Image Upload](image/img-upload.png){width=70%}
+
+# String Methods
+
+Strings have many methods that you can use to manipulate strings. Here we will discuss some of the most common methods.
+
+<!-- - `length`: returns the length of the string.
+- `charAt()`: returns the character at a specified index.
+- `charCodeAt()`: returns the Unicode of the character at a specified index.
+- `concat()`: concatenates two or more strings.
+- `indexOf()`: returns the index of the first occurrence of a specified value in a string.
+- `lastIndexOf()`: returns the index of the last occurrence of a specified value in a string.
+- `match()`: searches a string for a match against a regular expression, and returns the matches.
+- `replace()`: searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+- `search()`: searches a string for a specified value, or regular expression, and returns the position of the match.
+- `slice()`: extracts a part of a string and returns a new string.
+- `split()`: splits a string into an array of substrings.
+- `substr()`: extracts a specified number of characters in a string, from a start index.
+- `substring()`: extracts the characters in a string between two specified indices.
+- `toLowerCase()`: converts a string to lowercase letters.
+- `toUpperCase()`: converts a string to uppercase letters.
+- `trim()`: removes whitespace from both ends of a string.
+- `startsWith()`: checks if a string starts with a specified value.
+- `endsWith()`: checks if a string ends with a specified value.
+- `includes()`: checks if a string contains a specified value.
+- `repeat()`: returns a new string with a specified number of copies of an existing string. -->
+
+## `charAt()`, `[]`, `at()`
+
+The `charAt()` method returns the character at a specified index (position) in a string.
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.charAt(0)); // H
+console.log(str.charAt(7)); // W
+```
+
+You can also use square brackets `[]` to access the character at a specific index.
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str[0]); // H
+console.log(str[7]); // W
+```
+
+The `at()` method returns the character at a specified index (position) in a string, but it also *supports negative indexes*.
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.at(0)); // H
+console.log(str.at(7)); // W
+console.log(str.at(-1)); // !
+console.log(str.at(-3)); // l
+```
+
+## `slice()`
+
+The `slice()` method extracts a part of a string and returns a new string.
+
+The `slice()` method takes two parameters: the start index and the end index. The `slice()` method extracts up to *but not including the end index*.
+
+If you don't specify the end index, the `slice()` method will extract to the end of the string.
+
+The `slice()` method also supports negative indexes.
+
+Syntax:
+
+```{.js .numberLines}
+string.slice(start, end(optional))
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.slice(3, 6)); // lo,
+console.log(str.slice(3)); // lo, World!
+console.log(str.slice(-6, -1)); // World
+console.log(str.slice(-6)); // World!
+```
+
+## `substring()`
+
+The `substring()` method extracts the characters in a string between two specified indices.
+
+The `substring()` method takes two parameters: the start index and the end index.
+
+The `substring()` method is similar to the `slice()` method, but it doesn't support negative indexes.
+
+Syntax:
+
+```{.js .numberLines}
+string.substring(start, end(optional))
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.substring(3, 6)); // lo,
+console.log(str.substring(3)); // lo, World!
+```
+
+## `toUpperCase()`, `toLowerCase()`
+
+The `toUpperCase()` method converts a string to uppercase letters.
+
+The `toLowerCase()` method converts a string to lowercase letters.
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.toUpperCase()); // HELLO, WORLD!
+console.log(str.toLowerCase()); // hello, world!
+```
+
+## `toLocaleUpperCase()`, `toLocaleLowerCase()`
+
+The `toUpperCase()` and `toLowerCase()` methods in JavaScript convert a string to uppercase and lowercase respectively, without considering the locale of the user's environment.
+
+On the other hand, `toLocaleUpperCase()` and `toLocaleLowerCase()` methods also convert a string to uppercase and lowercase respectively, but they take into account the locale of the user's environment. This means that they respect the language rules for casing.
+
+For example, in Turkish, the lowercase `I` is `ı` and the uppercase `i` is `İ`. The `toUpperCase()` and `toLowerCase()` methods do not handle this correctly, while `toLocaleUpperCase()` and `toLocaleLowerCase()` do.
+
+Here's an example:
+
+```{.js .numberLines}
+let str = 'i';
+console.log(str.toUpperCase()); // I
+console.log(str.toLocaleUpperCase('tr-TR')); // İ 
+
+str = 'I';
+console.log(str.toLowerCase()); // i
+console.log(str.toLocaleLowerCase('tr-TR')); // ı
+```
+
+The output of both `toUpperCase()` and `toLocaleUpperCase()` is wrong for the Turkish language, while the output of both `toLowerCase()` and `toLocaleLowerCase()` is correct.
+
+## `includes()`
+
+The `includes()` method checks if a string contains a specified value.
+
+The `includes()` method returns `true` if the string contains the specified value, otherwise it returns `false`.
+
+Syntax:
+
+```{.js .numberLines}
+string.includes(searchValue, start(optional))
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.includes('Hello')); // true
+console.log(str.includes('hello')); // false
+console.log(str.includes('Hello', 0)); // true
+console.log(str.includes('Hello', 1)); // false
+console.log(str.includes('')); // true (empty string is always included)
+```
+
+## `concat()`
+
+The `concat()` method concatenates two or more strings and returns a new string.
+
+Syntax:
+
+```{.js .numberLines}
+string.concat(string1, string2, ..., stringN)
+```
+
+Example:
+
+```{.js .numberLines}
+var str1 = 'Hello ';
+var str2 = 'JS ';
+var str3 = 'and ';
+var str4 = 'the World!';
+console.log(str1.concat(str2, str3, str4)); // Hello JS and the World!
+```
+
+## `trim()`, `trimStart()`, `trimEnd()`
+
+The `trim()` method removes whitespace from both ends of a string.
+
+The `trimStart()` method removes whitespace from the beginning of a string.
+
+The `trimEnd()` method removes whitespace from the end of a string.
+
+Example:
+
+```{.js .numberLines}
+var str = '   Hello, World!   ';
+console.log(str.trim());      // 'Hello, World!'
+console.log(str.trimStart()); // 'Hello, World!   '
+console.log(str.trimEnd());   // '   Hello, World!'
+```
+
+## `split()`
+
+The `split()` method splits a string into an array of substrings.
+
+The `split()` method takes two parameters: the separator and the limit.
+
+The `split()` method splits the string at each occurrence of the separator.
+
+If you don't specify the limit, the `split()` method will split the string into all substrings.
+
+Syntax:
+
+```{.js .numberLines}
+string.split(separator, limit(optional))
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello JS and the World!';
+console.log(str.split(' '));    // ['Hello', 'JS', 'and', 'the', 'World!']
+console.log(str.split(' ', 2)); // ['Hello', 'JS']
+console.log(str.split(''));     // ['H', 'e', 'l', ..., '!']
+console.log(str.split(' ', 0)); // []
+console.log(str.split('', 3));  // ['H', 'e', 'l']
+console.log(str.split('and'));  // ['Hello JS ', ' the World!']
+```
+
+## `join()`
+
+If you have an array of strings and you want to join them into a single string, you can use the `join()` method.
+
+Syntax:
+
+```{.js .numberLines}
+array.join(separator)
+```
+
+Example:
+
+```{.js .numberLines}
+var arr = ['Hello', 'JS', 'and', 'the', 'World!'];
+console.log(arr.join(' ')); // Hello JS and the World!
+console.log(arr.join(''));  // HelloJSandtheWorld!
+console.log(arr.join());    // Hello,JS,and,the,World!
+console.log(arr.join(',')); // Hello,JS,and,the,World!
+```
+
+From the last two lines we can see that if we don't specify the separator, the default separator is a comma.
+
+Example on using `split()` with `slice()` and `join()`:
+
+```{.js .numberLines}
+var str = 'Hello JS and the World!';
+var res = str.split(' ').slice(1, 4).join('-');
+console.log(res); // JS-and-the
+```
+
+The result of `split(' ')` is `['Hello', 'JS', 'and', 'the', 'World!']`, then we use `slice(1, 4)` to get the elements from index 1 to index 3 (not including index 4) which are `['JS', 'and', 'the']`, then we use `join('-')` to join them with a hyphen `-` to get `JS-and-the`.
+
+## `repeat()`
+
+The `repeat()` method returns a new string with a specified number of copies of an existing string.
+
+Syntax:
+
+```{.js .numberLines}
+string.repeat(count)
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'Hello, World!';
+console.log(str.repeat(3)); // Hello, World!Hello, World!Hello, World!
+console.log(str.at(-1).repeat(3)); // !!!
+```
+
+## `replace()`, `replaceAll()`
+
+The `replace()` method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+
+The `replace()` method takes two parameters: the value to search for, and the value to replace it with.
+
+The `replace()` method only replaces the *first occurrence* of the specified value.
+
+The `replaceAll()` method is similar to the `replace()` method, but it replaces all occurrences of the specified value.
+
+Syntax:
+
+```{.js .numberLines}
+string.replace(searchValue, replaceValue)
+```
+
+Example:
+
+```{.js .numberLines}
+var str = 'HTML and CSS and JS';
+console.log(str.replace('and', 'AND')); // HTML AND CSS and JS
+console.log(str.replaceAll('and', 'AND')); // HTML AND CSS AND JS
+```
+
+## `padStart()`, `padEnd()`
+
+The `padStart()` method pads a string with another string until the resulting string reaches the specified length.
+
+The `padEnd()` method pads a string with another string until the resulting string reaches the specified length.
+
+Syntax:
+
+```{.js .numberLines}
+string.padStart(targetLength, padString(optional))
+string.padEnd(targetLength, padString(optional))
+```
+
+Example:
+
+```{.js .numberLines}
+var str = '99';
+console.log(str.padStart(10)); // '     99'
+console.log(str.padEnd(10));   // '99     '
+console.log(str.padStart(10, '0')); // '0000000099'
+console.log(str.padEnd(10, '0'));   // '9900000000'
+```
