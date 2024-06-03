@@ -611,59 +611,55 @@ This is an example of a real-time search in a CRUD system where the user inputs 
 
 For simplicity, the JS code is written in the `<script>` tag of the HTML file:
 
+In HTML:
+
 ```{.html .numberLines}
-<!DOCTYPE html>
-<html>
-  <body>
-    <h2>Product Management</h2>
+<h2>Product Management</h2>
+<input type="text" id="productName" placeholder="Enter product name" />
+<button onclick="addProduct()">Add Product</button>
+<h2>Product List</h2>
+<ul id="productList"></ul>
+<h2>Search Product</h2>
+<input
+  type="text"
+  id="searchProduct"
+  placeholder="Search product"
+  oninput="searchProduct()" />
+```
 
-    <input type="text" id="productName" placeholder="Enter product name" />
-    <button onclick="addProduct()">Add Product</button>
+In JavaScript:
 
-    <h2>Product List</h2>
-    <ul id="productList"></ul>
+```{.js .numberLines}
+var products = [];
 
-    <h2>Search Product</h2>
-    <input
-      type="text"
-      id="searchProduct"
-      placeholder="Search product"
-      oninput="searchProduct()" />
+function addProduct() {
+  var productName = document.getElementById("productName");
+  if (productName.value) { // check if the input is not empty
+    products.push(productName.value);
+    productName.value = "";
+    displayProducts();
+  }
+}
 
-    <script>
-      var products = [];
+function displayProducts() {
+  var productList = document.getElementById("productList");
+  productList.innerHTML = "";
+  for (var i = 0; i < products.length; i++) {
+    productList.innerHTML += `<li> ${products[i]} </li>`;
+  }
+}
 
-      function addProduct() {
-        var productName = document.getElementById("productName");
-        if (productName.value) { // check if the input is not empty
-          products.push(productName.value);
-          productName.value = "";
-          displayProducts();
-        }
-      }
-
-      function displayProducts() {
-        var productList = document.getElementById("productList");
-        productList.innerHTML = "";
-        for (var i = 0; i < products.length; i++) {
-          productList.innerHTML += `<li> ${products[i]} </li>`;
-        }
-      }
-
-      function searchProduct() {
-        var searchValue = document.getElementById("searchProduct").value.toLowerCase();
-        var productList = document.getElementById("productList");
-        productList.innerHTML = "";
-        for (var i = 0; i < products.length; i++) {
-          // toLowerCase() is used to make the search case-insensitive
-          if (products[i].toLowerCase().includes(searchValue)) {
-            productList.innerHTML += `<li> ${products[i]} </li>`;
-          }
-        }
-      }
-    </script>
-  </body>
-</html>
+function searchProduct() {
+  var searchValue = document.getElementById("searchProduct").value.toLowerCase();
+  var productList = document.getElementById("productList");
+  productList.innerHTML = "";
+  for (var i = 0; i < products.length; i++) {
+    // toLowerCase() is used to make the search case-insensitive
+    if (products[i].toLowerCase().includes(searchValue)) {
+      productList.innerHTML += `<li> ${products[i]} </li>`;
+    }
+  }
+}
 ```
 
 This is how the page will look:
@@ -677,6 +673,10 @@ This is how the page will look:
 ![While Searching...](image/searching.png){width=25%}
 
 :::
+
+You may notice that all elements appear when the search input is empty, this is because when the search input is empty, the `searchValue` is an empty string which is included in all strings.
+
+[Code Link](https://gist.github.com/MohamedEmary/f221e02b5738f932de0981c56e6cb291) to try it yourself.
 
 \pagebreak
 
