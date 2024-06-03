@@ -3,8 +3,9 @@
 original_dir=$(pwd)
 
 # Loop over each directory
-for dir in session-* practice-*; do
+for dir in session-*; do
   cd $dir
-  make-pdf ${dir}.md
+  make-pdf ${dir}.md &
+  disown
   cd $original_dir
 done
