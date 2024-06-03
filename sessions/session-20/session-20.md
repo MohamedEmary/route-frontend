@@ -384,3 +384,60 @@ element.removeAttribute('style');
 ```
 
 This will remove the `style` attribute from the element.
+
+# Class List
+
+The `classList` property allows you to `add`, `remove`, `toggle`, `replace`, and check if it `contains` classes on an element.
+
+Here is an example of adding, removing, and toggling classes on an element:
+
+- `add`: Adds a class or more to the element.
+- `remove`: Removes a class from the element.
+- `toggle`: Toggles a class on the element (adds the class if it doesn't exist, removes it if it does).
+- `replace`: Replaces a class with another class.
+- `contains`: Checks if the element has a specific class.
+
+```{.js .numberLines}
+var element = document.getElementById('myElement');
+element.classList.add('myClass');
+element.classList.remove('myClass');
+element.classList.toggle('myClass'); // adds the class again
+var hasClass = element.classList.contains('myClass');
+console.log(hasClass); // Output: true 
+element.classList.add('oldClass');
+element.classList.replace('oldClass', 'newClass');
+console.log(element.classList.contains('oldClass')); // Output: false
+console.log(element.classList.contains('newClass')); // Output: true
+```
+
+The `classList` property is useful for adding and removing classes dynamically based on user interactions or other events.
+
+You can pass multiple classes to the `add` method by separating them with a comma:
+
+```{.js .numberLines}
+element.classList.add('class1', 'class2', 'class3');
+```
+
+\pagebreak
+
+# Summary
+
+- The DOM (Document Object Model) is a tree-like structure that represents the document as nodes and objects.
+- Each element in the DOM is represented as an object with properties and methods that allow you to interact with it using JavaScript.
+- HTML is the initial page content, and the DOM represents the current content in a tree of objects.
+- You can select elements in the DOM using methods like:
+  - `getElementById` - Returns the element with the specified ID.
+  - `getElementsByClassName` - Returns a collection of elements with the specified class name.
+  - `getElementsByTagName` - Returns a collection of elements with the specified tag name.
+  - `getElementsByName` - Returns a node list of elements with the specified name attribute.
+  - `querySelector` - Returns the first element that matches the specified CSS selector.
+  - `querySelectorAll` - Returns a node list of elements that match the specified CSS selector.
+- `HTMLCollection` is an array-like object that contains elements with the same class name or tag name, while `NodeList` contains nodes, not just elements.
+- Event listeners are used to listen for events on elements and execute JavaScript functions when those events occur.
+- You can add event listeners using the `addEventListener` method.
+- Event listeners can also be added using the `element.event` syntax but it can only have one event listener per event type.
+- Some common events include `click`, `dblclick`, `mouseover`, `keydown`, `input`, `change`, `submit`, `focus`, `blur`, etc.
+- The event object contains information about the event that occurred, such as the type of event, the target element, and the mouse coordinates.
+- You can change the style of an element using the `style` property and the `cssText` property.
+- The `setAttribute`, `getAttribute`, and `removeAttribute` methods are used to get, set, and remove attributes of an element.
+- The `classList` property allows you to `add`, `remove`, `toggle`, `replace`, and check if it `contains` classes on an element.
