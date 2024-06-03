@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Create an empty array to hold the input files
+input_files=()
+
+echo "Merging These Files:"
+printf '=%.0s' $(seq 1 $(tput cols))
+echo
+
+# Loop over all matching files
+for file in session-*/PDFs/session-*.pdf; do
+  echo "$file"
+  # Add the file to the array
+  input_files+=("$file")
+done
+
+printf '=%.0s' $(seq 1 $(tput cols))
+echo
+
+# Run the merge command with the collected input files
+sejda-console merge -b retain -f "${input_files[@]}" -o all-sessions.pdf
