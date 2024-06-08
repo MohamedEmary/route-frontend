@@ -8,20 +8,29 @@
       content="login, register, system, javascript, session_storage, local_storage, json" />
     <meta name="author" content="Mohamed Emary" />
     <meta name="description" content="Login System" />
-    <link rel="icon" href="assets/images/enter.png" />
-    <link rel="stylesheet" href="assets/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Login System</title>
+    <link rel="icon" href="../images/enter.png" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Sign Up</title>
   </head>
   <body class="bg-dark">
     <nav class="shadow-lg text-center px-3 p-2">
       <h1 class="text-white fs-2 my-2">Smart Login System</h1>
     </nav>
+
     <main
       class="vh-100 d-flex justify-content-center align-items-center flex-column">
       <form class="p-3 shadow-lg text-center col-md-6 col-sm-12">
-        <h2 class="text-white fs-3 mb-3 fw-bold">Login</h2>
+        <h2 class="text-white fs-3 mb-3 fw-bold">Register</h2>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Mohamed Ahmed" />
+          <label for="name">Name</label>
+        </div>
         <div class="form-floating mb-3">
           <input
             type="email"
@@ -38,18 +47,14 @@
             placeholder="Password" />
           <label for="pass">Password</label>
         </div>
-        <div id="loginBtn" class="btn btn-outline-light text-white my-3 w-100">
-          Login
-        </div>
+        <div class="btn btn-outline-light text-white my-3 w-100">Login</div>
         <p class="text-white">
-          Don't have an account?
-          <a class="text-dark-emphasis" href="assets/pages/signup.html"
-            >Sign Up</a
-          >
+          You have an account?
+          <a class="text-dark-emphasis" href="../../index.html">Sign In</a>
         </p>
       </form>
     </main>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
