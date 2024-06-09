@@ -9,12 +9,11 @@ loginBtn.addEventListener("click", function () {
       allUsersData[i].email == email.value &&
       allUsersData[i].pass == pass.value
     ) {
-      console.log("Login successful");
       setCurrentUser(i);
       window.location.href = "./assets/pages/dashboard.html";
       return; // Exit the function after successful login
     } else {
-      console.log("Login failed");
+      document.getElementById("warningDiv").classList.remove("d-none");
     }
   }
 });
