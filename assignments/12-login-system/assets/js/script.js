@@ -16,4 +16,7 @@ loginBtn.addEventListener("click", function () {
       document.getElementById("warningDiv").classList.remove("d-none");
     }
   }
+  if (allUsersData.length == 0) {
+    document.getElementById("warningDiv").classList.remove("d-none");
+  }
 });
