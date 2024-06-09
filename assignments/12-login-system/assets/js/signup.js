@@ -19,13 +19,17 @@ signupBtn.addEventListener("click", function () {
     if (!warningDiv.classList.contains("d-none")) {
       warningDiv.classList.add("d-none");
     }
-
-    successfulDiv.classList.remove("d-none");
+    // so we don't remove class if it doesn't exist
+    if (successfulDiv.classList.contains("d-none")) {
+      successfulDiv.classList.remove("d-none");
+    }
   } else {
     if (!successfulDiv.classList.contains("d-none")) {
       successfulDiv.classList.add("d-none");
     }
-    warningDiv.classList.remove("d-none");
+    if (warningDiv.classList.contains("d-none")) {
+      warningDiv.classList.remove("d-none");
+    }
   }
 });
 
