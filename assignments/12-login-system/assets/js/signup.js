@@ -14,22 +14,11 @@ signupBtn.addEventListener("click", function () {
   var successfulDiv = document.getElementById("successfulDiv");
   if (validateInput()) {
     saveUserData(userData); // Also defined in storage.js
-
-    // so we don't add class if it's already there
-    if (!warningDiv.classList.contains("d-none")) {
-      warningDiv.classList.add("d-none");
-    }
-    // so we don't remove class if it doesn't exist
-    if (successfulDiv.classList.contains("d-none")) {
-      successfulDiv.classList.remove("d-none");
-    }
+    warningDiv.classList.add("d-none");
+    successfulDiv.classList.remove("d-none");
   } else {
-    if (!successfulDiv.classList.contains("d-none")) {
-      successfulDiv.classList.add("d-none");
-    }
-    if (warningDiv.classList.contains("d-none")) {
-      warningDiv.classList.remove("d-none");
-    }
+    successfulDiv.classList.add("d-none");
+    warningDiv.classList.remove("d-none");
   }
 });
 
