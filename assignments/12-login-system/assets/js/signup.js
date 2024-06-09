@@ -23,7 +23,7 @@ signupBtn.addEventListener("click", function () {
 });
 
 function validateUsername() {
-  var reg = /^[A-Z][a-z.]{3,15}$/;
+  var reg = /^[A-Z][a-z]+\s[A-Z][a-z]+$/;
   return reg.test(username.value);
 }
 
