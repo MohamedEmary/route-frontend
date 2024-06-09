@@ -2,7 +2,7 @@ var username = document.getElementById("name");
 var email = document.getElementById("email");
 var pass = document.getElementById("pass");
 var signupBtn = document.getElementById("signupBtn");
-var allUsersData = getUserData(); // This function is defined in storage.js
+var allUsersData = getUserData(); // Defined in storage.js file
 
 signupBtn.addEventListener("click", function () {
   var userData = {
@@ -10,12 +10,19 @@ signupBtn.addEventListener("click", function () {
     email: email.value,
     pass: pass.value,
   };
+  var warningDiv = document.getElementById("warningDiv");
+  var successfulDiv = document.getElementById("successfulDiv");
   if (validateInput()) {
     saveUserData(userData); // Also defined in storage.js
-    console.log("Valid Data");
+    if (!warningDiv.classList.contains("d-none")) {
+      warningDiv.classList.add("d-none");
+    }
+    successfulDiv.classList.remove("d-none");
   } else {
-    // TODO add a warning hidden paragraph and show it in this case
-    console.log("Please enter valid data");
+    if (!successfulDiv.classList.contains("d-none")) {
+      successfulDiv.classList.add("d-none");
+    }
+    warningDiv.classList.remove("d-none");
   }
 });
 

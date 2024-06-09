@@ -47,6 +47,31 @@
             placeholder="Password" />
           <label for="pass">Password</label>
         </div>
+        <div
+          id="warningDiv"
+          class="text-start bg-danger p-3 rounded-2 mt-3 mb-0 text-white d-none">
+          <p class="text-center fs-5 m-0 fw-bold">Please Enter Valid Data</p>
+          Example: <br />
+          <ol>
+            <li>
+              Name: Uppercase letter followed by lower case letters or spaces
+              (ex: <b>Mohamed Ahmed</b>)
+            </li>
+            <li>Email: Valid email (ex: <b>example@gmail.com</b>)</li>
+            <li>
+              Password: Minimum eight characters, at least one upper case
+              English letter, one lower case English letter, one number and one
+              special character (ex: <b>gr3at@3wdsG</b>)
+            </li>
+          </ol>
+        </div>
+
+        <div
+          id="successfulDiv"
+          class="text-start bg-success p-3 rounded-2 mt-3 mb-0 text-white d-none">
+          <p class="text-center fs-5 m-0 fw-bold">Successful Registration</p>
+        </div>
+
         <div id="signupBtn" class="btn btn-outline-light text-white my-3 w-100">
           Sign Up
         </div>
