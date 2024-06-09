@@ -14,9 +14,12 @@ signupBtn.addEventListener("click", function () {
   var successfulDiv = document.getElementById("successfulDiv");
   if (validateInput()) {
     saveUserData(userData); // Also defined in storage.js
+
+    // so we don't add class if it's already there
     if (!warningDiv.classList.contains("d-none")) {
       warningDiv.classList.add("d-none");
     }
+
     successfulDiv.classList.remove("d-none");
   } else {
     if (!successfulDiv.classList.contains("d-none")) {

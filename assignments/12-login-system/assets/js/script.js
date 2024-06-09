@@ -1,7 +1,7 @@
 var email = document.getElementById("email");
 var pass = document.getElementById("pass");
 var loginBtn = document.getElementById("loginBtn");
-var allUsersData = getUserData(); // This function is defined in storage.js
+var allUsersData = getUserData(); // Defined in storage.js
 
 loginBtn.addEventListener("click", function () {
   for (var i = 0; i < allUsersData.length; i++) {
