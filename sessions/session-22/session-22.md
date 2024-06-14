@@ -147,7 +147,7 @@ You can only send elements as arguments to the \texttt{append()}, \texttt{prepen
 
 \end{box4}
 
-## Traversing the DOM
+# Traversing the DOM
 
 Traversing the DOM which is a way to move around the DOM tree and select elements based on their relationship to other elements.
 
@@ -224,19 +224,138 @@ var previousNode = lastChild.previousSibling;
 console.log(previousNode); // #text
 ```
 
-<!-- 
+# Important Differences
 
-(including text nodes and HTML tags and even spaces and linebreaks between tags and comments)
+## `previousSibling`, `nextSibling` VS `previousElementSibling`, `nextElementSibling`
 
-***What is the difference between previousSibling, nextSibling, previousElementSibling, and nextElementSibling?***
+- `previousSibling` and `nextSibling` return nodes and these nodes include both element nodes and non-element nodes (like text and comment nodes).
+- `previousElementSibling` and `nextElementSibling` return only element nodes and ignore text and comment nodes.
 
-element.parentElement ==> returns the parent element of an element
-element.parentNode ==> returns the parent node of an element
-You can add elements to the HTML collection and when printing the HTML collection, the output will have the new element while in the NodeList, the output will not have the new element. Try it with `getElementsByTagName` and `querySelectorAll`. 
---- --- --- --- -- This is because the HTML collection is live while the NodeList is static. 
+```{.html .numberLines}
+<div>
+  <p>Paragraph 1</p>
+  Text
+  <p>Paragraph 2</p>
+</div>
+```
 
-## DOM vs BOM
+If the current node is the first `<p>` element, `nextSibling` would return the text node `Text`, while `nextElementSibling` would return the second `<p>` element.
 
-BOM is the Browser Object Model
+## NodeList VS HTML Collection
 
--->
+| NodeList                                                   | HTML Collection                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------------- |
+| Static (Does not update when the DOM changes)              | Live (Updates when the DOM changes)                         |
+| Returns a list of nodes                                    | Returns a list of elements                                  |
+| Nodes can be of any type like element, text, comment, etc. | Elements only                                               |
+| Returned by methods like `querySelectorAll`, `childNodes`  | Returned by methods like `getElementsByTagName`, `children` |
+
+By saying that the `NodeList` is static, it means that if you add an element to the DOM after getting the `NodeList`, the `NodeList` will not include the new element. On the other hand, the `HTML Collection` is live, which means that it will include the new element even after getting the `HTML Collection`.
+
+Example:
+
+HTML:
+
+```{.html .numberLines}
+<div>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</div>
+```
+
+JavaScript:
+
+```{.js .numberLines}
+var div = document.querySelector('div');
+var paragraphsCollection = div.getElementsByTagName('p');
+var paragraphsNodeList = div.querySelectorAll('p');
+
+console.log(paragraphsCollection.length); // 2
+console.log(paragraphsNodeList.length);   // 2
+
+var newParagraph = document.createElement('p');
+newParagraph.innerText = 'New paragraph';
+
+div.append(newParagraph);
+
+console.log(paragraphsCollection.length); // 3
+console.log(paragraphsNodeList.length);   // 2
+```
+
+In this example, the `paragraphsCollection` will have a length of 3, while the `paragraphsNodeList` will have a length of 2 because the `NodeList` is static and does not change when the DOM changes while the `HTML Collection` is live and changes when the DOM changes.
+
+# Browser Object Model (BOM)
+
+Browser Object Model or BOM is a set of objects provided by the browser to interact with the browser itself.
+
+## DOM VS BOM
+
+The DOM can be accessed via the BOM through the `window.document` property. So, you can say that the DOM is part of the BOM in a browser environment.
+
+`window` is a super global object in the browser environment.
+
+DOM is concerned with the content of the web document, while the BOM is concerned with the browser environment.
+
+## BOM Methods
+
+Some of the BOM methods include:
+
+- `setInterval()`: Calls a function or evaluates an expression each time a specified number of milliseconds elapses.
+
+For example, to display the value of a counter every second:
+
+```{.js .numberLines}
+function incrementCounter() {
+  console.log(counter);
+  counter++;
+}
+
+var counter = 0;
+var interval = setInterval(incrementCounter, 1000);
+```
+
+- `clearInterval()`: Stops the intervals set by `setInterval()`.
+
+For example, to stop the counter we made earlier when the user clicks a button:
+
+```{.js .numberLines}
+var button = document.getElementById('stop');
+
+button.addEventListener('click', function() {
+  console.log("Counter stopped");
+  clearInterval(interval);
+});
+```
+
+- `setTimeout()`: Calls a function or evaluates an expression **once** after a specified number of milliseconds.
+
+For example, to display a message after 3 seconds:
+
+```{.js .numberLines}
+function showMessage() {
+  console.log("Hello, world!");
+}
+
+setTimeout(showMessage, 3000);
+```
+
+- `alert()`: Displays an alert box with a message and an OK button.
+
+For example:
+
+```{.js .numberLines}
+alert("Hello, world!");
+```
+
+- `window.open()`: Opens a new browser window or a new tab.
+
+For example, This will open a new tab with Google's homepage.
+
+```{.js .numberLines}
+var googleBtn = document.getElementById('open');
+googleBtn.addEventListener('click', function() {
+  window.open('https://www.google.com', '_blank');
+});
+```
+
+`_blank` is the name of the target window. It specifies that the URL should be opened in a new tab and it's the default value. To open the URL in the same tab, you can use `_self`.
