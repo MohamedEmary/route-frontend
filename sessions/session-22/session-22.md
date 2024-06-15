@@ -454,6 +454,14 @@ The API comes in the form of a URL that you can send a request to and get a resp
 
 ![Request & Response](./image/request-response.svg){width=270px}
 
+When dealing with APIs the front-end developer takes the API from the back-end developer with the documentation of how to use it. [Example API documentation](https://forkify-api.herokuapp.com/).
+
+Then the front-end developer uses the API to get the data needed to display on the web page.
+
+A good way to test an APIs is to use a tool like [Postman](https://www.postman.com/), which is a collaboration platform for API development.
+
+## JSON
+
 When you get a response from an API, it's usually in the form of JSON (JavaScript Object Notation).
 
 JSON objects are easy to read and write. They are human-readable and can be parsed by JavaScript. JSON objects are written in key/value pairs and can be either an object or an array of objects.
@@ -468,14 +476,13 @@ Example of a JSON object:
 }
 ```
 
-## How to Use an API
+## Free APIs
 
-The front-end developer takes the API from the back-end developer with the documentation of how to use it. [Example API documentation](https://forkify-api.herokuapp.com/).
-
-Then the front-end developer uses the API to get the data needed to display on the web page.
+There are many free APIs available that you can use to practice working with APIs.
 
 Example Free APIs:
 
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 - [Forkify Meals API](https://forkify-api.herokuapp.com/)
 - [Random User Generator API](https://randomuser.me/documentation)
 - [Weather API](https://www.weatherapi.com/)
@@ -485,4 +492,194 @@ Example Free APIs:
 
 You can find many more on [this `public-apis` GitHub repo](https://github.com/public-apis/public-apis).
 
+## Terms Related to APIs
 
+There is some terms related to APIs:
+
+Lets use this API to explain the terms: `https://api.github.com/users/Microsoft`
+
+- **Base URL**: The main URL of the API. For example, `https://api.github.com/`
+- **Endpoint**: The part of the URL after the base URL that specifies a particular resource or collection of resources. For example, `/users/Microsoft` is the endpoint in the URL `https://api.github.com/users/Microsoft`.
+- **Request**: The action you want the API to perform. In this case, a `GET` request to `https://api.github.com/users/Microsoft` to retrieve the data of the user `Microsoft`.
+- **Response**: The data you get back from the API. This is typically in the form of a JSON object or array.
+- **Status Code**: A number returned by the server that indicates the result of the request. For example, 200 means the request was successful, while 404 means the requested resource could not be found.
+- **Method**: The type of request you are making. Common methods include `GET`, `POST`, `PUT`, `DELETE`, and `PATCH`.
+  - `GET`: To get data from the server.
+  - `POST`: To send data to the server.
+  - `PUT`: To update data on the server.
+  - `DELETE`: To delete data on the server.
+  - `PATCH`: To partially update data on the server.
+  - `PUT`: To update data on the server.
+
+## How to Use an API
+
+To use an API, you need to know about AJAX (Asynchronous JavaScript and XML) first.
+
+AJAX allows you to send and receive data from a server asynchronously without reloading the page.
+
+You can use the `XMLHttpRequest` object to interact with the server and get data from it. We don't use the object directly, but we create a `new` instance of it and use its methods.
+
+Example of creating an instance of `XMLHttpRequest`:
+
+```{.js .numberLines}
+var xhr = new XMLHttpRequest();
+```
+
+Then you can use the `open()` method to establish a connection with the server by specifying the request **method** and the **API URL**.
+
+```{.js .numberLines}
+xhr.open('METHOD', 'API_URL');
+```
+
+For example to establish a connection with the forkify API using the `GET` method:
+
+```{.js .numberLines}
+xhr.open('GET', 'https://forkify-api.herokuapp.com/api/search?q=pizza');
+```
+
+After opening the connection, you can use the `send()` method to send the request to the server.
+
+```{.js .numberLines}
+xhr.send();
+```
+
+To handle the response from the server, you can use the `onload` event handler.
+
+```{.js .numberLines}
+xhr.addEventListener('load', function() {
+  console.log(xhr.response);
+});
+```
+
+The `response` property of the `XMLHttpRequest` object contains the response data from the server as a **string**, so you need to parse it to a JSON object.
+
+```{.js .numberLines}
+xhr.addEventListener('load', function() {
+  var data = JSON.parse(xhr.response);
+  console.log(data);
+});
+```
+
+Now you can access the data returned by the API.
+
+```{.js .numberLines}
+xhr.addEventListener('load', function() {
+  var data = JSON.parse(xhr.response);
+  console.log(data.recipes);
+});
+```
+
+You can also use `readystatechange` event handler to check the status of the request before accessing the data.
+
+```{.js .numberLines}
+xhr.addEventListener('readystatechange', function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.response);
+    console.log(data.recipes);
+  }
+});
+```
+
+::: {.columns .ragged columngap=2.5em column-rule="0.0pt solid black"}
+
+`readyState` values are:
+
+- `0`: request not initialized
+- `1`: server connection established
+- `2`: request sent
+- `3`: processing request
+- `4`: request finished and response is ready
+
+\columnbreak
+
+`status` values are:
+
+- `200`: OK (request successful)
+- `403`: Forbidden (access denied)
+- `404`: Not Found (resource not found)
+- `500`: Internal Server Error
+:::
+
+Here is the complete code to get data from the forkify API:
+
+```{.js .numberLines}
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://forkify-api.herokuapp.com/api/search?q=pizza');
+xhr.send();
+
+xhr.addEventListener('load', function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.response);
+    console.log(data.recipes);
+  }
+});
+```
+
+## Displaying Data from an API
+
+This is an example of how to display data from an API on a web page.
+
+HTML:
+
+```{.html .numberLines}
+<div class="container">
+  <div class="row" id="rowBody"></div>
+</div>
+```
+
+JavaScript:
+
+```{.js .numberLines}
+var xhr = new XMLHttpRequest();
+var allRecipies = [];
+xhr.open("get", "https://forkify-api.herokuapp.com/api/search?q=pizza");
+xhr.send();
+xhr.addEventListener("readystatechange", function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    allRecipies = JSON.parse(xhr.response).recipes;
+    display();
+  }
+});
+
+function display() {
+  var content = ``;
+  for (var i = 0; i < allRecipies.length; i++) {
+    content += `
+      <div class="col-md-4">
+        <img
+          src="${allRecipies[i].image_url}"
+          class="w-100 rounded-2"
+          height="200px" 
+        />
+        <h3>${allRecipies[i].title}</h3>
+        <p>${allRecipies[i].publisher}</p>
+      </div>`;
+  }
+  document.getElementById("rowBody").innerHTML = content;
+}
+```
+
+\pagebreak
+
+# Summary
+
+- `innerHTML` returns the HTML content of an element, while `innerText` returns the text content of an element.
+- When assigning a value with HTML tags to `innerHTML`, the browser will render the HTML tags as HTML elements.
+- When assigning a value with HTML tags to `innerText`, the browser will render the HTML tags as plain text.
+- To create an element, you can use the `document.createElement()` method.
+- To append an element inside another element in the DOM, you can use the `append()` method, and to prepend an element, you can use the `prepend()` method.
+- To add an element before or after another element in the DOM, you can use the `before()` and `after()` methods.
+- Traversing the DOM is a way to move around the DOM tree and select elements based on their relationship to other elements.
+- `previousSibling` and `nextSibling` return nodes and include both element nodes and non-element nodes, while `previousElementSibling` and `nextElementSibling` return only element nodes.
+- The Browser Object Model (BOM) is a set of objects provided by the browser to interact with the browser itself.
+- Some of the BOM methods include `setInterval`, `clearInterval`, `setTimeout`, `alert`, `open`, and `close`.
+- The `screen` object provides information about the user's screen, and the `location` object contains information about the current URL.
+- APIs (Application Programming Interfaces) are used to communicate between different software applications.
+- JSON (JavaScript Object Notation) is a common format for data exchange in APIs.
+- To use an API, you need to know about AJAX (Asynchronous JavaScript and XML).
+- You can use the `XMLHttpRequest` object to interact with the server and get data from it.
+- To display data from an API on a web page, you can create an instance of `XMLHttpRequest`, send a request to the API, and handle the response to access the data.
+- Common HTTP methods include `GET`, `POST`, `PUT`, `DELETE`, and `PATCH`.
+- The `readyState` property of the `XMLHttpRequest` object indicates the state of the request, and the `status` property indicates the status of the response.
+  - `readyState` values: `0`, `1`, `2`, `3`, `4`
+  - `status` values: `200`, `403`, `404`, `500`
