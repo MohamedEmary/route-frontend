@@ -296,11 +296,13 @@ The DOM can be accessed via the BOM through the `window.document` property. So, 
 
 DOM is concerned with the content of the web document, while the BOM is concerned with the browser environment.
 
-## BOM Methods
+## BOM Methods & Properties
 
 Some of the BOM methods include:
 
-- `setInterval()`: Calls a function or evaluates an expression each time a specified number of milliseconds elapses.
+### `setInterval`
+
+`setInterval()`: Calls a function or evaluates an expression each time a specified number of milliseconds elapses.
 
 For example, to display the value of a counter every second:
 
@@ -314,7 +316,9 @@ var counter = 0;
 var interval = setInterval(incrementCounter, 1000);
 ```
 
-- `clearInterval()`: Stops the intervals set by `setInterval()`.
+### `clearInterval`
+
+`clearInterval()`: Stops the intervals set by `setInterval()`.
 
 For example, to stop the counter we made earlier when the user clicks a button:
 
@@ -327,7 +331,9 @@ button.addEventListener('click', function() {
 });
 ```
 
-- `setTimeout()`: Calls a function or evaluates an expression **once** after a specified number of milliseconds.
+### `setTimeout`
+
+`setTimeout()`: Calls a function or evaluates an expression **once** after a specified number of milliseconds.
 
 For example, to display a message after 3 seconds:
 
@@ -339,7 +345,9 @@ function showMessage() {
 setTimeout(showMessage, 3000);
 ```
 
-- `alert()`: Displays an alert box with a message and an OK button.
+### `alert`
+
+`alert()`: Displays an alert box with a message and an OK button.
 
 For example:
 
@@ -347,15 +355,134 @@ For example:
 alert("Hello, world!");
 ```
 
-- `window.open()`: Opens a new browser window or a new tab.
+### `open`
+
+`open()`: Opens a new browser window or a new tab.
 
 For example, This will open a new tab with Google's homepage.
 
 ```{.js .numberLines}
 var googleBtn = document.getElementById('open');
 googleBtn.addEventListener('click', function() {
-  window.open('https://www.google.com', '_blank');
+  open('https://www.google.com', '_blank');
 });
 ```
 
 `_blank` is the name of the target window. It specifies that the URL should be opened in a new tab and it's the default value. To open the URL in the same tab, you can use `_self`.
+
+`open` also has other parameters like `width`, `height`, `top`, `left`, etc.
+
+```{.js .numberLines}
+open('https://www.google.com', '_blank', 'width=500,height=500,top=100,left=100');
+```
+
+Notice that `width`, `height`, `top`, and `left` are passed as a string with a comma separating them.
+
+`open` is also one of `window`'s methods, so you can use it in the form `window.open()`.
+
+### `close`
+
+`close()`: Closes the current window.
+
+For example, to close the current window when the user clicks a button:
+
+```{.js .numberLines}
+var closeBtn = document.getElementById('close');
+closeBtn.addEventListener('click', function() {
+  close();
+});
+```
+
+### `innerWidth` and `innerHeight`
+
+`innerWidth` and `innerHeight` properties return the width and height of the content area of the browser window.
+
+If you resize the browser window, the values of `innerWidth` and `innerHeight` will change accordingly.
+
+```{.js .numberLines}
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+```
+
+### `screen` Object
+
+The `screen` object provides information about the user's screen.
+
+Some of the properties of the `screen` object include:
+
+- `screen.width`: Returns the width of the screen.
+- `screen.height`: Returns the height of the screen.
+<!-- - `screen.availWidth`: Returns the width of the screen excluding the taskbar.
+- `screen.availHeight`: Returns the height of the screen excluding the taskbar. -->
+
+Those properties don't change when you resize the browser window because they are related to the user's screen (the hardware) and not the browser window.
+
+```{.js .numberLines}
+console.log(screen.width);
+console.log(screen.height);
+```
+
+`screen` object also has other properties like `availWidth`, `availHeight`.
+
+These are the areas of the screen that you can use to display content, it doesn't include the taskbar or any other system-related areas.
+
+```{.js .numberLines}
+console.log(screen.availWidth);
+console.log(screen.availHeight);
+```
+
+## `location` Object
+
+The `location` object contains information about the current URL.
+
+Some of the properties of the `location` object include:
+
+- `location.href`: Returns the entire URL.
+- `location.hostname`: Returns the domain name of the web host.
+- `location.pathname`: Returns the path and filename of the current page.
+- `location.history`: Returns the history of the current page.
+  - `location.history.back()`: Goes back to the previous page.
+  - `location.history.forward()`: Goes forward to the next page.
+
+# API
+
+API (Application Programming Interface) is universal way for different software applications to communicate with each other.
+
+APIs can be used to **recieve** data from a server, **send** data to a server, **modify** data on a server, and **delete** data from a server.
+
+The API comes in the form of a URL that you can send a request to and get a response from.
+
+![Request & Response](./image/request-response.svg){width=270px}
+
+When you get a response from an API, it's usually in the form of JSON (JavaScript Object Notation).
+
+JSON objects are easy to read and write. They are human-readable and can be parsed by JavaScript. JSON objects are written in key/value pairs and can be either an object or an array of objects.
+
+Example of a JSON object:
+
+```{.json .numberLines}
+{
+  "name": "Mohamed",
+  "age": 30,
+  "city": "Cairo"
+}
+```
+
+## How to Use an API
+
+The front-end developer takes the API from the back-end developer with the documentation of how to use it. [Example API documentation](https://forkify-api.herokuapp.com/).
+
+Then the front-end developer uses the API to get the data needed to display on the web page.
+
+Example Free APIs:
+
+- [Forkify Meals API](https://forkify-api.herokuapp.com/)
+- [Random User Generator API](https://randomuser.me/documentation)
+- [Weather API](https://www.weatherapi.com/)
+- [News API](https://newsapi.org/)
+- [MovieDB API](https://www.themoviedb.org/documentation/api)
+- [Fake Store API](https://fakestoreapi.com/)
+
+You can find many more on [this `public-apis` GitHub repo](https://github.com/public-apis/public-apis).
+
+
