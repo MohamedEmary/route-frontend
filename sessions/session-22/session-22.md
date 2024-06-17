@@ -615,6 +615,14 @@ xhr.addEventListener('load', function() {
 });
 ```
 
+We also have `error` event handler to handle errors when the request fails.
+
+```{.js .numberLines}
+xhr.addEventListener('error', function() {
+  console.log('An error occurred');
+});
+```
+
 ## Displaying Data from an API
 
 This is an example of how to display data from an API on a web page.
