@@ -167,6 +167,8 @@ Notice that adding `spacing` in the `theme` object will override the default spa
 - `space-y-Number` is used to add spacing between elements in the y-axis. It can be used with flexbox classes like `flex-col`.
 - `space-x-reverse` should be used if you have `flex-row-reverse` or `flex-col-reverse` to reverse the spacing in the x-axis.
 
+The space classes start applying spaces from the second element, that is because they have the selector `space-x-.... > * + *` which means apply the margin to the second element and the rest of the elements.
+
 ## Width and Height
 
 ### Width
@@ -249,4 +251,4 @@ This part is important for responsive design. Better to read it in the [document
 
 ## Background
 
-See the Background part in [documentation](https://tailwindcss.com/docs/background-color
+See the Background part in [documentation](https://tailwindcss.com/docs/background-color)
