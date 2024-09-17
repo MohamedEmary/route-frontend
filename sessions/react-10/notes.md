@@ -1,6 +1,6 @@
 ---
 title: \begin{title}\centering\vspace*{1cm}\rule{\textwidth}{0.05cm}\linebreak\vspace{0.5cm}{\Huge\bfseries Redux Notes \par}\vspace{0.1cm}\hrule\end{title}
-date: \today # date +'%B %e, %Y' | clip
+date: September 14, 2024
 ---
 
 # Redux Vs Redux Toolkit
